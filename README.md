@@ -1,2 +1,2 @@
-# Augmented-Reality-Piano-Interface
-Project for Stanford's CS 377M course. Augmented Reality Piano Interface. 
+# HolographicAcademy
+This will be the home of all code assets necessary for the Holographic Academy.
