@@ -53,6 +53,46 @@ public class Song {
         Bars = bars;
         DefaultBPM = defaultBPM;
     }
+
+    public string GetTitle()
+    {
+        return Title;
+    }
+
+    public string GetComposer()
+    {
+        return Composer;
+    }
+
+    public int GetKey()
+    {
+        return Key;
+    }
+
+    public int GetBeatsPerMeasure()
+    {
+        return BeatsPerMeasure;
+    }
+
+    public int GetBeatUnit()
+    {
+        return BeatUnit;
+    }
+
+    public int GetDefaultBPM()
+    {
+        return DefaultBPM;
+    }
+
+    public int GetCurrentBPM()
+    {
+        return CurrentBPM;
+    }
+
+    public List<Bar> GetBars()
+    {
+        return Bars;
+    }
 }
 
 public class Bar
@@ -62,6 +102,11 @@ public class Bar
     public Bar(List<Note> notes)
     {
         Notes = notes;
+    }
+
+    public List<Note> GetNotes()
+    {
+        return Notes;
     }
 }
 
@@ -78,5 +123,20 @@ public class Note
         StartingBeat = startingBeat;
         PianoKey = pianoKey;
         Duration = duration;
+    }
+
+    public int GetStartingBeat()
+    {
+        return StartingBeat;
+    }
+
+    public int GetPianoKey()
+    {
+        return PianoKey;
+    }
+
+    public int GetDuration()
+    {
+        return Duration;
     }
 }
