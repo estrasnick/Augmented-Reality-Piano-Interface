@@ -9,6 +9,10 @@ public class GazeGestureManager : MonoBehaviour
 
     // Represents the hologram that is currently being gazed at.
     public GameObject FocusedObject { get; private set; }
+    
+    // Shaders 
+    Shader normal;
+    Shader highlighted;
 
     GestureRecognizer recognizer;
 
@@ -16,6 +20,10 @@ public class GazeGestureManager : MonoBehaviour
     void Start()
     {
         Instance = this;
+
+        // Get shaders
+        normal = Shader.Find("Mobile/Diffuse");
+        highlighted = Shader.Find("Mobile/Unlit (Supports Lightmap)");
 
         // Set up a GestureRecognizer to detect Select gestures.
         recognizer = new GestureRecognizer();
@@ -46,11 +54,23 @@ public class GazeGestureManager : MonoBehaviour
         {
             // If the raycast hit a hologram, use that as the focused object.
             FocusedObject = hitInfo.collider.gameObject;
+
+            // If there was no old focused object, then this one is also the old one. 
+            if (oldFocusObject == null)
+            {
+                oldFocusObject = FocusedObject;
+            }
+
+            MeshRenderer hitMesh = FocusedObject.GetComponent<MeshRenderer>();
+            hitMesh.material.shader = highlighted;
         }
         else
         {
             // If the raycast did not hit a hologram, clear the focused object.
             FocusedObject = null;
+
+            MeshRenderer hitMesh = oldFocusObject.GetComponent<MeshRenderer>();
+            hitMesh.material.shader = normal;
         }
 
         // If the focused object changed this frame,
