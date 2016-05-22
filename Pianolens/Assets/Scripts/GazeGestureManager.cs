@@ -5,6 +5,11 @@ using UnityEngine.VR.WSA.Input;
 
 public class GazeGestureManager : MonoBehaviour
 {
+    // The layer we care about is the "Keys" layer
+    private const string LAYER_NAME = "Interactive";
+    private const string NORMAL_SHADER_NAME = "Mobile/Diffuse";
+    private const string HIGHLIGHTED_SHADER_NAME = "Mobile/Unlit (Supports Lightmap)";
+
     public static GazeGestureManager Instance { get; private set; }
 
     // Represents the hologram that is currently being gazed at.
@@ -14,6 +19,8 @@ public class GazeGestureManager : MonoBehaviour
     Shader normal;
     Shader highlighted;
 
+    int layerMask;
+
     GestureRecognizer recognizer;
 
     // Use this for initialization
@@ -21,9 +28,12 @@ public class GazeGestureManager : MonoBehaviour
     {
         Instance = this;
 
+        // Set the mask for the designated interactive layer. 
+        layerMask = 1 << LayerMask.NameToLayer(LAYER_NAME);
+
         // Get shaders
-        normal = Shader.Find("Mobile/Diffuse");
-        highlighted = Shader.Find("Mobile/Unlit (Supports Lightmap)");
+        normal = Shader.Find(NORMAL_SHADER_NAME);
+        highlighted = Shader.Find(HIGHLIGHTED_SHADER_NAME);
 
         // Set up a GestureRecognizer to detect Select gestures.
         recognizer = new GestureRecognizer();
@@ -50,7 +60,7 @@ public class GazeGestureManager : MonoBehaviour
         var gazeDirection = Camera.main.transform.forward;
 
         RaycastHit hitInfo;
-        if (Physics.Raycast(headPosition, gazeDirection, out hitInfo))
+        if (Physics.Raycast(headPosition, gazeDirection, out hitInfo, Mathf.Infinity, layerMask))
         {
             // If the raycast hit a hologram, use that as the focused object.
             FocusedObject = hitInfo.collider.gameObject;
@@ -69,8 +79,11 @@ public class GazeGestureManager : MonoBehaviour
             // If the raycast did not hit a hologram, clear the focused object.
             FocusedObject = null;
 
-            MeshRenderer hitMesh = oldFocusObject.GetComponent<MeshRenderer>();
-            hitMesh.material.shader = normal;
+            if (oldFocusObject != null)
+            {
+                MeshRenderer hitMesh = oldFocusObject.GetComponent<MeshRenderer>();
+                hitMesh.material.shader = normal;
+            }
         }
 
         // If the focused object changed this frame,
