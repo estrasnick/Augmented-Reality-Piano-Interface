@@ -8,7 +8,7 @@ public class GazeGestureManager : MonoBehaviour
     // The layer we care about is the "Keys" layer
     private const string LAYER_NAME = "Interactive";
     private const string NORMAL_SHADER_NAME = "Mobile/Diffuse";
-    private const string HIGHLIGHTED_SHADER_NAME = "Mobile/Unlit (Supports Lightmap)";
+    private const string HIGHLIGHTED_SHADER_NAME = "Mobile/Bumped Specular";
 
     public static GazeGestureManager Instance { get; private set; }
 
@@ -42,7 +42,11 @@ public class GazeGestureManager : MonoBehaviour
             // Send an OnSelect message to the focused object and its ancestors.
             if (FocusedObject != null)
             {
-                string message = "OnSelect" + (FocusedObject.tag ?? "");
+                string message = "OnSelect";
+                if (FocusedObject.tag != "Untagged")
+                {
+                     message += FocusedObject.tag;
+                }
                 FocusedObject.SendMessageUpwards(message);
             }
         };
@@ -55,7 +59,11 @@ public class GazeGestureManager : MonoBehaviour
         // Helps with debugging. Hit "space" to emulate a detected gesture.
         if (Input.GetKeyDown("space") && (FocusedObject != null))
         {
-            string message = "OnSelect" + (FocusedObject.tag ?? "");
+            string message = "OnSelect";
+            if (FocusedObject.tag != "Untagged")
+            {
+                message += FocusedObject.tag;
+            }
             FocusedObject.SendMessageUpwards(message);
         }
 
