@@ -42,7 +42,8 @@ public class GazeGestureManager : MonoBehaviour
             // Send an OnSelect message to the focused object and its ancestors.
             if (FocusedObject != null)
             {
-                FocusedObject.SendMessageUpwards("OnSelect");
+                string message = "OnSelect" + (FocusedObject.tag ?? "");
+                FocusedObject.SendMessageUpwards(message);
             }
         };
         recognizer.StartCapturingGestures();
@@ -54,7 +55,8 @@ public class GazeGestureManager : MonoBehaviour
         // Helps with debugging. Hit "space" to emulate a detected gesture.
         if (Input.GetKeyDown("space") && (FocusedObject != null))
         {
-            FocusedObject.SendMessageUpwards("OnSelect");
+            string message = "OnSelect" + (FocusedObject.tag ?? "");
+            FocusedObject.SendMessageUpwards(message);
         }
 
         // Figure out which hologram is focused this frame.

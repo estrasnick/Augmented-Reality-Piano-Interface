@@ -5,8 +5,16 @@ public class WorldCursor : MonoBehaviour {
 
     private MeshRenderer meshRenderer;
 
+    int layerMask;
+    const string IGNORE_LAYER = "Ignore Raycast";
+
 	// Use this for initialization
 	void Start () {
+
+        // Set the mask for the designated interactive layer. 
+        layerMask = 1 << LayerMask.NameToLayer(IGNORE_LAYER);
+        layerMask = ~layerMask;
+
         //Grab the mesh renderer that's on the same object as this script.
         meshRenderer = this.gameObject.GetComponentInChildren<MeshRenderer>();
 	}
@@ -20,7 +28,7 @@ public class WorldCursor : MonoBehaviour {
 
         RaycastHit hitInfo;
 
-        if (Physics.Raycast(headPosition, gazeDirection, out hitInfo))
+        if (Physics.Raycast(headPosition, gazeDirection, out hitInfo, Mathf.Infinity, layerMask))
         {
             // If the raycast hit a hologram...
             // Display the cursor mesh.
