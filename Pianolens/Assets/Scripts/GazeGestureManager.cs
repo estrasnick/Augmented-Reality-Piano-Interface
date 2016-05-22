@@ -51,6 +51,12 @@ public class GazeGestureManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Helps with debugging. Hit "space" to emulate a detected gesture.
+        if (Input.GetKeyDown("space") && (FocusedObject != null))
+        {
+            FocusedObject.SendMessageUpwards("OnSelect");
+        }
+
         // Figure out which hologram is focused this frame.
         GameObject oldFocusObject = FocusedObject;
 
