@@ -1,0 +1,1072 @@
+fileFormatVersion: 2
+guid: 245cfca3863569744b4bccc52db967e6
+timeCreated: 1462014813
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: j_flag1
+    100002: j_flag10
+    100004: j_flag11
+    100006: j_flag12
+    100008: j_flag13
+    100010: j_flag14
+    100012: j_flag15
+    100014: j_flag2
+    100016: j_flag3
+    100018: j_flag4
+    100020: j_flag5
+    100022: j_flag6
+    100024: j_flag7
+    100026: j_flag8
+    100028: j_flag9
+    100030: j_flag_root
+    100032: j_head
+    100034: j_hip
+    100036: j_leg1
+    100038: j_leg2
+    100040: j_leg3
+    100042: j_Root
+    100044: j_spine1
+    100046: j_spine2
+    100048: //RootNode
+    400000: j_flag1
+    400002: j_flag10
+    400004: j_flag11
+    400006: j_flag12
+    400008: j_flag13
+    400010: j_flag14
+    400012: j_flag15
+    400014: j_flag2
+    400016: j_flag3
+    400018: j_flag4
+    400020: j_flag5
+    400022: j_flag6
+    400024: j_flag7
+    400026: j_flag8
+    400028: j_flag9
+    400030: j_flag_root
+    400032: j_head
+    400034: j_hip
+    400036: j_leg1
+    400038: j_leg2
+    400040: j_leg3
+    400042: j_Root
+    400044: j_spine1
+    400046: j_spine2
+    400048: //RootNode
+    7400000: Appear
+    7400002: Idle
+    7400004: LookAround
+    7400006: Happy
+    7400008: Attack
+    7400010: Jump_00
+    7400012: Land
+    7400014: Sad
+    7400016: Jiggle
+    7400018: Walk
+    7400020: Run
+    7400022: Disappear
+    7400024: anim11
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: j_Root
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Appear
+      takeName: Take 001
+      firstFrame: 10
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: j_Root
+        weight: 1
+      - path: j_Root/j_hip
+        weight: 1
+      - path: j_Root/j_hip/j_leg1
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2/j_leg3
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2/j_leg3/j_head
+        weight: 1
+      - path: j_Root/j_hip/j_spine1
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13/j_flag14
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13/j_flag14/j_flag15
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 30
+      lastFrame: 90
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: j_Root
+        weight: 1
+      - path: j_Root/j_hip
+        weight: 1
+      - path: j_Root/j_hip/j_leg1
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2/j_leg3
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2/j_leg3/j_head
+        weight: 1
+      - path: j_Root/j_hip/j_spine1
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13/j_flag14
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13/j_flag14/j_flag15
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: LookAround
+      takeName: Take 001
+      firstFrame: 95
+      lastFrame: 185
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: j_Root
+        weight: 1
+      - path: j_Root/j_hip
+        weight: 1
+      - path: j_Root/j_hip/j_leg1
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2/j_leg3
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2/j_leg3/j_head
+        weight: 1
+      - path: j_Root/j_hip/j_spine1
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13/j_flag14
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13/j_flag14/j_flag15
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Happy
+      takeName: Take 001
+      firstFrame: 190
+      lastFrame: 250
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: j_Root
+        weight: 1
+      - path: j_Root/j_hip
+        weight: 1
+      - path: j_Root/j_hip/j_leg1
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2/j_leg3
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2/j_leg3/j_head
+        weight: 1
+      - path: j_Root/j_hip/j_spine1
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13/j_flag14
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13/j_flag14/j_flag15
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Attack
+      takeName: Take 001
+      firstFrame: 255
+      lastFrame: 285
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: j_Root
+        weight: 1
+      - path: j_Root/j_hip
+        weight: 1
+      - path: j_Root/j_hip/j_leg1
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2/j_leg3
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2/j_leg3/j_head
+        weight: 1
+      - path: j_Root/j_hip/j_spine1
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13/j_flag14
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13/j_flag14/j_flag15
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Jump_00
+      takeName: Take 001
+      firstFrame: 290
+      lastFrame: 317
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: j_Root
+        weight: 1
+      - path: j_Root/j_hip
+        weight: 1
+      - path: j_Root/j_hip/j_leg1
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2/j_leg3
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2/j_leg3/j_head
+        weight: 1
+      - path: j_Root/j_hip/j_spine1
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13/j_flag14
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13/j_flag14/j_flag15
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Land
+      takeName: Take 001
+      firstFrame: 345
+      lastFrame: 350
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: j_Root
+        weight: 1
+      - path: j_Root/j_hip
+        weight: 1
+      - path: j_Root/j_hip/j_leg1
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2/j_leg3
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2/j_leg3/j_head
+        weight: 1
+      - path: j_Root/j_hip/j_spine1
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13/j_flag14
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13/j_flag14/j_flag15
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Sad
+      takeName: Take 001
+      firstFrame: 355
+      lastFrame: 475
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: j_Root
+        weight: 1
+      - path: j_Root/j_hip
+        weight: 1
+      - path: j_Root/j_hip/j_leg1
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2/j_leg3
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2/j_leg3/j_head
+        weight: 1
+      - path: j_Root/j_hip/j_spine1
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13/j_flag14
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13/j_flag14/j_flag15
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Jiggle
+      takeName: Take 001
+      firstFrame: 480
+      lastFrame: 510
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: j_Root
+        weight: 1
+      - path: j_Root/j_hip
+        weight: 1
+      - path: j_Root/j_hip/j_leg1
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2/j_leg3
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2/j_leg3/j_head
+        weight: 1
+      - path: j_Root/j_hip/j_spine1
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13/j_flag14
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13/j_flag14/j_flag15
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walk
+      takeName: Take 001
+      firstFrame: 515
+      lastFrame: 545
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: j_Root
+        weight: 1
+      - path: j_Root/j_hip
+        weight: 1
+      - path: j_Root/j_hip/j_leg1
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2/j_leg3
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2/j_leg3/j_head
+        weight: 1
+      - path: j_Root/j_hip/j_spine1
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13/j_flag14
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13/j_flag14/j_flag15
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Run
+      takeName: Take 001
+      firstFrame: 550
+      lastFrame: 565
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: j_Root
+        weight: 1
+      - path: j_Root/j_hip
+        weight: 1
+      - path: j_Root/j_hip/j_leg1
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2/j_leg3
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2/j_leg3/j_head
+        weight: 1
+      - path: j_Root/j_hip/j_spine1
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13/j_flag14
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13/j_flag14/j_flag15
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Disappear
+      takeName: Take 001
+      firstFrame: 570
+      lastFrame: 580
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: j_Root
+        weight: 1
+      - path: j_Root/j_hip
+        weight: 1
+      - path: j_Root/j_hip/j_leg1
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2/j_leg3
+        weight: 1
+      - path: j_Root/j_hip/j_leg1/j_leg2/j_leg3/j_head
+        weight: 1
+      - path: j_Root/j_hip/j_spine1
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13/j_flag14
+        weight: 1
+      - path: j_Root/j_hip/j_spine1/j_spine2/j_flag_root/j_flag1/j_flag2/j_flag3/j_flag4/j_flag5/j_flag6/j_flag7/j_flag8/j_flag9/j_flag10/j_flag11/j_flag12/j_flag13/j_flag14/j_flag15
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: j_Root
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 7436b0695ec09f14d8517269af498009,
+    type: 3}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,126 @@
+fileFormatVersion: 2
+guid: 7436b0695ec09f14d8517269af498009
+timeCreated: 1462014814
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: j_flag1
+    100002: j_flag10
+    100004: j_flag11
+    100006: j_flag12
+    100008: j_flag13
+    100010: j_flag14
+    100012: j_flag15
+    100014: j_flag2
+    100016: j_flag3
+    100018: j_flag4
+    100020: j_flag5
+    100022: j_flag6
+    100024: j_flag7
+    100026: j_flag8
+    100028: j_flag9
+    100030: j_flag_root
+    100032: j_head
+    100034: j_hip
+    100036: j_leg1
+    100038: j_leg2
+    100040: j_leg3
+    100042: j_Root
+    100044: j_spine1
+    100046: j_spine2
+    100048: //RootNode
+    100050: Treble_clef
+    400000: j_flag1
+    400002: j_flag10
+    400004: j_flag11
+    400006: j_flag12
+    400008: j_flag13
+    400010: j_flag14
+    400012: j_flag15
+    400014: j_flag2
+    400016: j_flag3
+    400018: j_flag4
+    400020: j_flag5
+    400022: j_flag6
+    400024: j_flag7
+    400026: j_flag8
+    400028: j_flag9
+    400030: j_flag_root
+    400032: j_head
+    400034: j_hip
+    400036: j_leg1
+    400038: j_leg2
+    400040: j_leg3
+    400042: j_Root
+    400044: j_spine1
+    400046: j_spine2
+    400048: //RootNode
+    400050: Treble_clef
+    4300000: Treble_clef
+    9500000: //RootNode
+    13700000: Treble_clef
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: j_Root
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

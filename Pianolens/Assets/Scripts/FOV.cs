@@ -4,8 +4,6 @@ using System.Collections;
 public class FOV : MonoBehaviour
 {
 
-    private MeshRenderer[] meshRenderers;
-
     // Use this for initialization
     void Start()
     {

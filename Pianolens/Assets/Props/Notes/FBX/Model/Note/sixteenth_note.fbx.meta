@@ -1,0 +1,84 @@
+fileFormatVersion: 2
+guid: b7602ae48763ec3438bad64558f73709
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: j_ball
+    100002: j_flag1
+    100004: j_flag2
+    100006: j_flag3
+    100008: j_head
+    100010: j_Root
+    100012: j_spine1
+    100014: j_spine2
+    100016: j_spine3
+    100018: //RootNode
+    100020: sixteenth_note
+    400000: j_ball
+    400002: j_flag1
+    400004: j_flag2
+    400006: j_flag3
+    400008: j_head
+    400010: j_Root
+    400012: j_spine1
+    400014: j_spine2
+    400016: j_spine3
+    400018: //RootNode
+    400020: sixteenth_note
+    4300000: sixteenth_note
+    9500000: //RootNode
+    13700000: sixteenth_note
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 0
+  copyAvatar: 1
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: j_Root
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: e1bd38362f71e7f4b9c907f7310c29ac,
+    type: 3}
+  animationType: 2
+  additionalBone: 0
+  userData: 
