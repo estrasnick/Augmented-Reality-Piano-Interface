@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Up
   - Down
+  - Keys
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - 
   - 
   - Interactive
-  - 
+  - Keys
   - 
   - 
   - 

@@ -8,12 +8,16 @@ public class FOVTarget : MonoBehaviour
     Camera FOVCamera;
     private MeshRenderer leftMeshRenderer;
     private MeshRenderer rightMeshRenderer;
-    private const int LAYER_KEYS = 8;
-    private const float FOV_THRESHOLD = 0.2f;
+    private const string LAYER_NAME = "Keys";
+    private const float FOV_THRESHOLD = 0.25f;
+    int layerMask;
 
     void Start()
     {
         FOVCamera = Camera.main;
+
+        // Set the mask for the designated interactive layer. 
+        layerMask = 1 << LayerMask.NameToLayer(LAYER_NAME);
 
         //Grab the mesh renderer that's on the same object as this script.
         MeshRenderer[] renderers = FOVCamera.GetComponentsInChildren<MeshRenderer>();
@@ -27,15 +31,17 @@ public class FOVTarget : MonoBehaviour
     {
         //Do a raycast into the world based on the user's 
         //head position and orientation.
-        var headPosition = Camera.main.transform.position;
-        var gazeDirection = Camera.main.transform.forward;
+        var headPosition = FOVCamera.transform.position;
+        var gazeDirection = FOVCamera.transform.forward;
 
         RaycastHit hitInfo;
-        if (Physics.Raycast(headPosition, gazeDirection, out hitInfo, LAYER_KEYS)) 
+        if (Physics.Raycast(headPosition, gazeDirection, out hitInfo, Mathf.Infinity, layerMask)) 
         {
             Vector3 viewPos = FOVCamera.WorldToViewportPoint(target.position);
+
             if (viewPos.x > (1.0f - FOV_THRESHOLD))
             {
+                print(viewPos.x.ToString() + " target is on the right side!");
                 // Move theCursor to the point where the raycase hit. 
                 rightMeshRenderer.transform.position = hitInfo.point;
                 // Rotate the cursor to hug the surface of the hologram
@@ -47,6 +53,7 @@ public class FOVTarget : MonoBehaviour
             }
             else if (viewPos.x < FOV_THRESHOLD)
             {
+                print(viewPos.x.ToString() + " target is on the left side!");
                 // Move theCursor to the point where the raycase hit. 
                 leftMeshRenderer.transform.position = hitInfo.point;
                 // Rotate the cursor to hug the surface of the hologram
@@ -61,6 +68,11 @@ public class FOVTarget : MonoBehaviour
                 leftMeshRenderer.enabled = false;
                 rightMeshRenderer.enabled = false;
             }
+        }
+        else
+        {
+            leftMeshRenderer.enabled = false;
+            rightMeshRenderer.enabled = false;
         }
     }
 }
