@@ -369,6 +369,7 @@ GameObject:
   - 65: {fileID: 479566576}
   - 23: {fileID: 479566575}
   - 114: {fileID: 479566579}
+  - 114: {fileID: 479566580}
   m_Layer: 0
   m_Name: PlaybackMenu
   m_TagString: Untagged
@@ -451,6 +452,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aea20a55f6bad52458ff78418ef35f98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &479566580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 479566574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dce32fbfac9455c4395509fb2f4307db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &671075919
