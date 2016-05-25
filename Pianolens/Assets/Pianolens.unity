@@ -192,6 +192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quarter_note: {fileID: 400020, guid: 954cbd4487e85bb4c854ba418259f12e, type: 2}
   whole_note: {fileID: 400020, guid: 89fd957adcf589d4e98d82a8d1c59aba, type: 2}
+  half_note: {fileID: 400020, guid: 821186a84a914984180dd75a95ec494c, type: 2}
 --- !u!1 &65187973
 GameObject:
   m_ObjectHideFlags: 0
@@ -864,7 +865,7 @@ CharacterController:
   m_Height: 1.6
   m_Radius: 0.3
   m_SlopeLimit: 45
-  m_StepOffset: 0.3
+  m_StepOffset: 0
   m_SkinWidth: 0.01
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0.8, z: 0}
@@ -2275,7 +2276,7 @@ CharacterController:
   m_Height: 0.8
   m_Radius: 0.3
   m_SlopeLimit: 45
-  m_StepOffset: 0.3
+  m_StepOffset: 0
   m_SkinWidth: 0.01
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0.4, z: 0}
