@@ -115,18 +115,18 @@ public class Note
 {
     static int REST = 0;
 
-    int StartingBeat;
+    float StartingBeat;
     int PianoKey; // # of the key on the piano. 0 indicates a rest.
-    int Duration; // duration, in beats
+    float Duration; // duration, in beats
 
-    public Note(int startingBeat, int pianoKey, int duration)
+    public Note(float startingBeat, int pianoKey, float duration)
     {
         StartingBeat = startingBeat;
         PianoKey = pianoKey;
         Duration = duration;
     }
 
-    public int GetStartingBeat()
+    public float GetStartingBeat()
     {
         return StartingBeat;
     }
@@ -136,7 +136,7 @@ public class Note
         return PianoKey;
     }
 
-    public int GetDuration()
+    public float GetDuration()
     {
         return Duration;
     }

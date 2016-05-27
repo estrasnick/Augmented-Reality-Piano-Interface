@@ -16,6 +16,13 @@ public class SheetMusicCycle : MonoBehaviour {
     public Transform quarter_note;
     public Transform whole_note;
     public Transform half_note;
+    public Transform eighth_note;
+    public Transform sixteenth_note;
+    public Transform quarter_note_dotted;
+    public Transform whole_note_dotted;
+    public Transform half_note_dotted;
+    public Transform eighth_note_dotted;
+    public Transform sixteenth_note_dotted;
 
     GameObject MusicSheet;
     Vector3 MusicSheetLoc;
@@ -83,6 +90,35 @@ public class SheetMusicCycle : MonoBehaviour {
         {
             return whole_note;
         }
+        else if (ratio == .125f)
+        {
+            return eighth_note;
+        }
+        else if (ratio == .0625f)
+        {
+            return sixteenth_note;
+        }
+        else if (ratio == .375f)
+        {
+            return quarter_note_dotted;
+        }
+        else if (ratio == .75f)
+        {
+            return half_note_dotted;
+        }
+        else if (ratio == 1.5)
+        {
+            return whole_note_dotted;
+        }
+        else if (ratio == .1875f)
+        {
+            return eighth_note_dotted;
+        }
+        else if (ratio == .09375f)
+        {
+            return sixteenth_note_dotted;
+        }
+        // default fall-through: render something
         else
         {
             return quarter_note;
