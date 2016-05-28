@@ -7,6 +7,15 @@ TagManager:
   - Up
   - Down
   - Keys
+  - MicroNote
+  - Left
+  - Right
+  - Forward
+  - Backward
+  - YawL
+  - YawR
+  - ZoomIn
+  - ZoomOut
   layers:
   - Default
   - TransparentFX
