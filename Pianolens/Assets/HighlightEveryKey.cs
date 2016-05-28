@@ -62,6 +62,8 @@ public class HighlightEveryKey : MonoBehaviour {
             //print(pos[0]);
             //print(pos[1]);
             cube.name = "highlighting" + i;
+            FOVTarget f = cube.AddComponent<FOVTarget>();
+            f.target = cube.transform;
             cube.transform.position = (pos[0]+pos[1])/2.0f;
             //print(pos[0]);
             cube.transform.localScale = new Vector3((pos[0]-pos[1]).magnitude, 0.03f, 0.05f);
