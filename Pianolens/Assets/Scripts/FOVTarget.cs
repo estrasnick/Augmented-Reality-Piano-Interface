@@ -5,8 +5,6 @@ using System.Collections.Generic;
 
 public class FOVTarget : MonoBehaviour
 {
-    public Transform leftTarget;
-    public Transform rightTarget;
     Camera FOVCamera;
     public MeshRenderer leftMeshRenderer;
     public MeshRenderer rightMeshRenderer;
