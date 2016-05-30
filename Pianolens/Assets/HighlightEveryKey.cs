@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using System.Collections.Generic;
 
 public class HighlightEveryKey : MonoBehaviour {
-    bool[] keyIsHighlighted = new bool[109];
+    private const int MAX_KEY_INDEX = 108;
+    bool[] keyIsHighlighted = new bool[MAX_KEY_INDEX + 1];
     private PianoDescriptor p;
     private Vector3 start;
     private Vector3 end;
@@ -47,34 +48,50 @@ public class HighlightEveryKey : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (Random.Range(0, 100) < 2)
+        if (Random.Range(0, MAX_KEY_INDEX) < 2)
         {
+            // TODO: This isn't going to be random in the end. This is going to have
+            // an understanding of the music that needs to be played. For example, 
+            // if we know we are going to play the first bar of "Ode-to-Joy", then we have: 62, 62, 63, 64
+            // This means we have a note range of 62 to 64. It's important for the app to understand
+            // what music is upcoming so the FOV compensation shows you where your head will need to be in the future.
             int i = Random.Range(40, 60);
-            //int i = Random.Range(60, 72);
+
             if (keyIsHighlighted[i])
             {
-                GameObject g = GameObject.Find("highlighting" + i);
-                GameObject.DestroyObject(g);
-                keyIsHighlighted[i] = false;
+                SetKeyHighlight(false, i);
             }
             else
             {
-                Vector3[] pos = p.getKeyWidth(i, false);
-                GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-                cube.GetComponent<MeshRenderer>().sharedMaterial = highlightMatRef;
-                //print(pos[0]);
-                //print(pos[1]);
-                cube.name = "highlighting" + i;
-                FOVTarget f = cube.AddComponent<FOVTarget>();
-                f.target = cube.transform;
-                cube.transform.parent = stage.transform;
-                cube.transform.position = stage.transform.position + ((pos[0] + pos[1]) / 2.0f);
-                //print(pos[0]);
-                cube.transform.localScale = new Vector3((pos[0] - pos[1]).magnitude, 0.03f, 0.05f);
-                //GameObject.Add
-                keyIsHighlighted[i] = true;
-
+                SetKeyHighlight(true, i);
             }
+        }
+    }
+
+    // Highlight the key
+    private void SetKeyHighlight(bool isHighlight, int keyIndex)
+    {
+        if (!isHighlight)
+        {
+            GameObject g = GameObject.Find("highlighting" + keyIndex.ToString().PadLeft('0'));
+            GameObject.DestroyObject(g);
+            keyIsHighlighted[keyIndex] = false;
+        }
+        else
+        {
+            Vector3[] pos = p.getKeyWidth(keyIndex, false);
+            GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            cube.GetComponent<MeshRenderer>().sharedMaterial = highlightMatRef;
+            //print(pos[0]);
+            //print(pos[1]);
+            cube.name = "highlighting" + keyIndex.ToString().PadLeft('0');
+            cube.tag = "HighlightedKey";
+            cube.transform.parent = stage.transform;
+            cube.transform.position = stage.transform.position + ((pos[0] + pos[1]) / 2.0f);
+            //print(pos[0]);
+            cube.transform.localScale = new Vector3((pos[0] - pos[1]).magnitude, 0.03f, 0.05f);
+            //GameObject.Add
+            keyIsHighlighted[keyIndex] = true;
         }
     }
 }
