@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PianoDescriptor : MonoBehaviour
+public class PianoDescriptor
 {
     int numOfScales = 7;
     int numKeys = 7*12+4;
@@ -95,7 +95,6 @@ public class PianoDescriptor : MonoBehaviour
             float temp = whiteKeyWidthRatio[i];
             whiteKeyWidthRatio[i] += start;
             start += temp;
-            print(whiteKeyWidthRatio[i]);
         }
     }
 
