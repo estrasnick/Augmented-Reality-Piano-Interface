@@ -113,7 +113,8 @@ public class Bar
 
 public class Note
 {
-    public const int REST = 0;
+    public const int Rest_Treble = 0;
+    public const int Rest_Bass = 1;
     public const int A_minus1 = 21;
     public const int Asharp_minus1 = 22;
     public const int Bflat_minus1 = 22;
@@ -266,7 +267,11 @@ public class Note
         dotted_half_note,
         dotted_whole_note,
         dotted_eighth_note,
-        dotted_sixteenth_note
+        dotted_sixteenth_note,
+        quarter_rest,
+        half_rest,
+        whole_rest,
+        eighth_rest
     }
 
 

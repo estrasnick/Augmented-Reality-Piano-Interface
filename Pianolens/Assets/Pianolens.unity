@@ -201,6 +201,10 @@ MonoBehaviour:
   dotted_eighth_note: {fileID: 400020, guid: 613a2fcafe2002e47a99164749028555, type: 2}
   dotted_sixteenth_note: {fileID: 400010, guid: 494893b7ceb208e4292aba99e6a514ff,
     type: 2}
+  quarter_rest: {fileID: 447328, guid: 5798a2a31315c364eb4104a50f5d7161, type: 2}
+  whole_rest: {fileID: 445230, guid: 58e288957b815014aa17f7b7b73ca3ca, type: 2}
+  half_rest: {fileID: 489062, guid: 3e3e334c07b18974d9684eb9fd3945b2, type: 2}
+  eighth_rest: {fileID: 407514, guid: 146d91a3b452c19488ba9d011d52a63a, type: 2}
 --- !u!1 &65187973
 GameObject:
   m_ObjectHideFlags: 0
