@@ -102,6 +102,12 @@ public class Timing : MonoBehaviour {
         CurrentBeat = 1;
     }
 
+    // Set the current BPM. For use with metronome adjustment
+    public static void SetBPM(int bpm)
+    {
+        CurrentBPM = bpm;
+    }
+
     public static float GetCurrentBeat()
     {
         return CurrentBeat;
