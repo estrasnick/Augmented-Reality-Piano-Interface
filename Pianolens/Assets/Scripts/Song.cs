@@ -40,6 +40,8 @@ public class Song
     int DefaultBPM;
     int CurrentBPM;
 
+    static Song CurrentSong;
+
     public Song(string title, string composer, int key, int beatsPerMeasure, int beatUnit, List<Bar> bars, int defaultBPM, int currentBPM = -1)
     {
         if (currentBPM == -1)
@@ -93,6 +95,16 @@ public class Song
     public List<Bar> GetBars()
     {
         return Bars;
+    }
+
+    public static void SetCurrentSong(Song newSong)
+    {
+        CurrentSong = newSong;
+    }
+
+    public static Song GetCurrentSong()
+    {
+        return CurrentSong;
     }
 }
 
