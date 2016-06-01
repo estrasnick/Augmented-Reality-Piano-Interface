@@ -69,7 +69,7 @@ public class Timing : MonoBehaviour {
     }
 
     // Called when a new song is selected, updating timing information
-    void UpdateNewSong()
+    static void UpdateNewSong()
     {
         LastTime = Time.time;
         SongId = Song.GetId();
@@ -84,21 +84,31 @@ public class Timing : MonoBehaviour {
     }
 
     // Pause timing
-    public void Pause()
+    public static void Pause()
     {
         IsPaused = true;
     }
 
     // Unpause timing
-    public void Unpause()
+    public static void Unpause()
     {
         IsPaused = false;
     }
 
     // Set the currently active bar, resetting the beat to 1.
-    public void SetBar(int bar)
+    public static void SetBar(int bar)
     {
         CurrentBar = bar;
         CurrentBeat = 1;
+    }
+
+    public static float GetCurrentBeat()
+    {
+        return CurrentBeat;
+    }
+
+    public static int GetCurrentBar()
+    {
+        return CurrentBar;
     }
 }
