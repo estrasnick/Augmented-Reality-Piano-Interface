@@ -31,6 +31,7 @@ public enum Keys
 
 public class Song
 {
+    int Id;
     string Title;
     string Composer;
     int Key;
@@ -42,12 +43,13 @@ public class Song
 
     static Song CurrentSong;
 
-    public Song(string title, string composer, int key, int beatsPerMeasure, int beatUnit, List<Bar> bars, int defaultBPM, int currentBPM = -1)
+    public Song(int id, string title, string composer, int key, int beatsPerMeasure, int beatUnit, List<Bar> bars, int defaultBPM, int currentBPM = -1)
     {
         if (currentBPM == -1)
         {
             CurrentBPM = defaultBPM;
         }
+        Id = id;
         Title = title;
         Composer = composer;
         Key = key;
@@ -55,6 +57,11 @@ public class Song
         BeatUnit = beatUnit;
         Bars = bars;
         DefaultBPM = defaultBPM;
+    }
+
+    public int GetId()
+    {
+        return Id;
     }
 
     public string GetTitle()
