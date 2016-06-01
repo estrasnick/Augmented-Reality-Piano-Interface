@@ -1,0 +1,474 @@
+fileFormatVersion: 2
+guid: ebf515194bb7f0341a555c2acc7a93a0
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Banner - Simple Button Timer Styles
+    21300002: 'Banners - Control '
+    21300004: Banners - How It Works
+    21300006: Banners - Other Cool Stuff
+    21300008: Banners - One Time Use
+    21300010: Tooltip - Call Function
+    21300012: Tooltip - About Turret
+    21300014: Tooltip - Flip Switch
+    21300016: Tooltip - Horiz Timer
+    21300018: Tooltip - Features
+    21300020: Tooltip - Vertical Timer
+    21300022: Tooltip - Enter the Turret
+    21300024: Tooltip - Ammo Clip
+    21300026: Tooltip - Circular Timer
+    21300028: Tooltip - Menu Sample
+    21300030: Tooltip - Pick Up Weapon
+    21300032: Tooltip - Activate Door
+    21300034: Tooltip - Char Control
+    21300036: Tooltip - Keypad Example
+    21300038: Tooltip - What's Possible
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Banner - Simple Button Timer Styles
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 661
+        width: 601
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 254.5, y: 47.110107}
+        - {x: -254.5, y: 47.110107}
+        - {x: -254.5, y: -26.889893}
+        - {x: -211.5, y: -31.889893}
+        - {x: -190.5, y: -46.889893}
+        - {x: -177.5, y: -46.889893}
+        - {x: -163.5, y: -26.889893}
+        - {x: 253.5, y: -26.889893}
+        - {x: 254.5, y: -25.889893}
+      tessellationDetail: -1
+    - name: 'Banners - Control '
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 661
+        width: 601
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -254.37433, y: 47.110107}
+        - {x: -254.37433, y: -25.889893}
+        - {x: -253.37433, y: -26.889893}
+        - {x: -190.37433, y: -46.889893}
+        - {x: -182.37433, y: -46.889893}
+        - {x: -162.37433, y: -26.889893}
+        - {x: 254.62567, y: -26.889893}
+        - {x: 254.62567, y: 47.110107}
+      tessellationDetail: -1
+    - name: Banners - How It Works
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 547
+        width: 601
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 254.5, y: 48.682648}
+        - {x: -254.5, y: 48.682648}
+        - {x: -254.5, y: -26.317352}
+        - {x: -191.5, y: -47.317352}
+        - {x: -184.5, y: -47.317352}
+        - {x: -163.5, y: -26.317352}
+        - {x: 253.5, y: -26.317352}
+        - {x: 254.5, y: -25.317352}
+      tessellationDetail: -1
+    - name: Banners - Other Cool Stuff
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 547
+        width: 601
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -254.37433, y: 48.682648}
+        - {x: -254.37433, y: -29.317352}
+        - {x: -208.37433, y: -26.317352}
+        - {x: -187.37433, y: -47.317352}
+        - {x: -183.37433, y: -47.317352}
+        - {x: -162.37433, y: -26.317352}
+        - {x: 254.62567, y: -26.317352}
+        - {x: 254.62567, y: 48.682648}
+      tessellationDetail: -1
+    - name: Banners - One Time Use
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 430
+        width: 404
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 171, y: 48.21762}
+        - {x: -171, y: 48.21762}
+        - {x: -171, y: -26.78238}
+        - {x: -126, y: -26.78238}
+        - {x: -107, y: -46.78238}
+        - {x: -100, y: -46.78238}
+        - {x: -80, y: -26.78238}
+        - {x: 170, y: -26.78238}
+        - {x: 171, y: -25.78238}
+      tessellationDetail: -1
+    - name: Tooltip - Call Function
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 322
+        width: 301
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -127.5, y: 43.365295}
+        - {x: -127.5, y: -31.634705}
+        - {x: -80.5, y: -35.634705}
+        - {x: -68.5, y: -42.634705}
+        - {x: -57.5, y: -42.634705}
+        - {x: -50.5, y: -31.634705}
+        - {x: 127.5, y: -31.634705}
+        - {x: 127.5, y: 43.365295}
+      tessellationDetail: -1
+    - name: Tooltip - About Turret
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 322
+        width: 300
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -126.77203, y: 43.365295}
+        - {x: -126.77203, y: -30.634705}
+        - {x: -125.77203, y: -31.634705}
+        - {x: -68.77203, y: -42.634705}
+        - {x: -58.772034, y: -42.634705}
+        - {x: -47.772034, y: -31.634705}
+        - {x: 128.22797, y: -31.634705}
+        - {x: 128.22797, y: 43.365295}
+      tessellationDetail: -1
+    - name: Tooltip - Flip Switch
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 215
+        width: 301
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -127.5, y: 44.35881}
+        - {x: -127.5, y: -30.64119}
+        - {x: -80.5, y: -33.64119}
+        - {x: -67.5, y: -42.64119}
+        - {x: -59.5, y: -42.64119}
+        - {x: -50.5, y: -30.64119}
+        - {x: 127.5, y: -30.64119}
+        - {x: 127.5, y: 44.35881}
+      tessellationDetail: -1
+    - name: Tooltip - Horiz Timer
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 215
+        width: 300
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -126.77203, y: 44.35881}
+        - {x: -126.77203, y: -31.64119}
+        - {x: -67.77203, y: -42.64119}
+        - {x: -58.772034, y: -42.64119}
+        - {x: -47.772034, y: -30.64119}
+        - {x: 128.22797, y: -30.64119}
+        - {x: 128.22797, y: 44.35881}
+      tessellationDetail: -1
+    - name: Tooltip - Features
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 108
+        width: 301
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -127.5, y: 43.352333}
+        - {x: -127.5, y: -31.647667}
+        - {x: -80.5, y: -35.647667}
+        - {x: -68.5, y: -42.647667}
+        - {x: -57.5, y: -42.647667}
+        - {x: -50.5, y: -31.647667}
+        - {x: 127.5, y: -31.647667}
+        - {x: 127.5, y: 43.352333}
+      tessellationDetail: -1
+    - name: Tooltip - Vertical Timer
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 108
+        width: 300
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -126.77203, y: 43.352333}
+        - {x: -126.77203, y: -30.647667}
+        - {x: -125.77203, y: -31.647667}
+        - {x: -68.77203, y: -42.647667}
+        - {x: -58.772034, y: -42.647667}
+        - {x: -47.772034, y: -31.647667}
+        - {x: 128.22797, y: -31.647667}
+        - {x: 128.22797, y: 43.352333}
+      tessellationDetail: -1
+    - name: Tooltip - Enter the Turret
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 300
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -127, y: 43.345856}
+        - {x: -127, y: -31.654144}
+        - {x: -73, y: -41.654144}
+        - {x: -61, y: -41.654144}
+        - {x: -51, y: -31.654144}
+        - {x: 127, y: -31.654144}
+        - {x: 127, y: 43.345856}
+      tessellationDetail: -1
+    - name: Tooltip - Ammo Clip
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 322
+        width: 302
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -127.70596, y: 43.365295}
+        - {x: -127.70596, y: -30.634705}
+        - {x: -126.70596, y: -31.634705}
+        - {x: -73.70596, y: -42.634705}
+        - {x: -60.705963, y: -42.634705}
+        - {x: -49.705963, y: -31.634705}
+        - {x: 128.29404, y: -31.634705}
+        - {x: 128.29404, y: 43.365295}
+      tessellationDetail: -1
+    - name: Tooltip - Circular Timer
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 215
+        width: 301
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -127.20596, y: 44.35881}
+        - {x: -127.20596, y: -30.64119}
+        - {x: -80.20596, y: -36.64119}
+        - {x: -68.20596, y: -42.64119}
+        - {x: -56.205963, y: -42.64119}
+        - {x: -48.205963, y: -30.64119}
+        - {x: 127.79404, y: -30.64119}
+        - {x: 127.79404, y: 44.35881}
+      tessellationDetail: -1
+    - name: Tooltip - Menu Sample
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 108
+        width: 300
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -126.86011, y: 43.352333}
+        - {x: -126.86011, y: -31.647667}
+        - {x: -77.86011, y: -32.647667}
+        - {x: -67.86011, y: -42.647667}
+        - {x: -60.860107, y: -42.647667}
+        - {x: -49.860107, y: -31.647667}
+        - {x: 127.13989, y: -31.647667}
+        - {x: 127.13989, y: 43.352333}
+      tessellationDetail: -1
+    - name: Tooltip - Pick Up Weapon
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 0
+        width: 302
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -127.70596, y: 42.5}
+        - {x: -127.70596, y: -31.5}
+        - {x: -126.70596, y: -32.5}
+        - {x: -88.70596, y: -42.5}
+        - {x: -57.705963, y: -42.5}
+        - {x: -47.705963, y: -36.5}
+        - {x: 128.29404, y: -32.5}
+        - {x: 128.29404, y: 42.5}
+      tessellationDetail: -1
+    - name: Tooltip - Activate Door
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 322
+        width: 301
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 128.43396, y: 43.365295}
+        - {x: -127.56604, y: 43.365295}
+        - {x: -127.56604, y: -31.634705}
+        - {x: -70.56604, y: -42.634705}
+        - {x: -59.56604, y: -42.634705}
+        - {x: -52.56604, y: -35.634705}
+        - {x: 127.43396, y: -31.634705}
+        - {x: 128.43396, y: -30.634705}
+      tessellationDetail: -1
+    - name: Tooltip - Char Control
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 216
+        width: 302
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -127.91193, y: 43.704666}
+        - {x: -127.91193, y: -32.295334}
+        - {x: -87.91193, y: -42.295334}
+        - {x: 20.088074, y: -42.295334}
+        - {x: 129.08807, y: -31.295334}
+        - {x: 129.08807, y: 43.704666}
+      tessellationDetail: -1
+    - name: Tooltip - Keypad Example
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 108
+        width: 302
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -127.91193, y: 43.352333}
+        - {x: -127.91193, y: -30.647667}
+        - {x: -126.91193, y: -31.647667}
+        - {x: -69.91193, y: -42.647667}
+        - {x: -57.911926, y: -42.647667}
+        - {x: -48.911926, y: -37.647667}
+        - {x: 129.08807, y: -31.647667}
+        - {x: 129.08807, y: 43.352333}
+      tessellationDetail: -1
+    - name: Tooltip - What's Possible
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 0
+        width: 303
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 129.74225, y: 42.5}
+        - {x: -128.25775, y: 42.5}
+        - {x: -128.25775, y: -32.5}
+        - {x: -81.25775, y: -42.5}
+        - {x: -54.25775, y: -42.5}
+        - {x: -48.25775, y: -32.5}
+        - {x: 128.74225, y: -32.5}
+        - {x: 129.74225, y: -31.5}
+      tessellationDetail: -1
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
