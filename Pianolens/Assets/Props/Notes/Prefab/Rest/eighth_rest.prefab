@@ -69,9 +69,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 407514}
-  - 95: {fileID: 9500458}
-  - 143: {fileID: 14353912}
-  - 114: {fileID: 11439486}
   m_Layer: 0
   m_Name: eighth_rest
   m_TagString: MicroNote
@@ -293,42 +290,6 @@ Transform:
   m_Father: {fileID: 407514}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &9500458
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 145906}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 70c65f8a909317e4d8c8d97cdf8ab24f, type: 3}
-  m_Controller: {fileID: 9100000, guid: 8843d483f040bc94f8991adf0572a8fd, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11439486
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 145906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fbe9780de27c74439857201a87b4c88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chrAnimator: {fileID: 9500458}
-  chrAnimatorController:
-  - {fileID: 9100000, guid: 8843d483f040bc94f8991adf0572a8fd, type: 2}
-  - {fileID: 9100000, guid: 295e9e6cab5f4764c8d7eb57afd32ac7, type: 2}
-  chrController: {fileID: 14353912}
-  meshData:
-  - {fileID: 135984}
-  jumpSpeed: 6
 --- !u!137 &13701990
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -374,23 +335,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.06665969, y: -0.13103527, z: 0.000000022351742}
     m_Extent: {x: 0.2745524, y: 0.20617133, z: 0.06903621}
   m_DirtyAABB: 0
---- !u!143 &14353912
-CharacterController:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 145906}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 0.7
-  m_Radius: 0.2
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.01
-  m_MinMoveDistance: 0
-  m_Center: {x: 0, y: 0.35, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
