@@ -1,0 +1,500 @@
+fileFormatVersion: 2
+guid: d866145a2b9739d46b38c42558082b6b
+timeCreated: 1464760589
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: MenuItems AutoPlay On
+    21300002: MenuItems AutoPlay OFF
+    21300004: MenuItems About
+    21300006: MenuItems 1
+    21300008: MenuItems Song1
+    21300010: MenuItems Song2
+    21300012: MenuItems Song Choice
+    21300014: MenuItems 2
+    21300016: MenuItems Calibrate OFf
+    21300018: MenuItems Calibrate On
+    21300020: MenuItems 3
+    21300022: MenuItems Speed
+    21300024: MenuItems Fantastic
+    21300026: MenuItems 4
+    21300028: MenuItems Real-Time
+    21300030: MenuItems Speed 75
+    21300032: MenuItems Quit
+    21300034: MenuItems Speed 50
+    21300036: MenuItems Speed 25
+    21300038: MenuItems 5
+    21300040: MenuItems 6
+    21300042: MenuItems 7
+    21300044: MenuItems 8
+    21300046: MenuItems BACK
+    21300048: MenuItems Options
+    21300050: MenuItems Close Menu
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: MenuItems AutoPlay On
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 292
+        width: 140
+        height: 44
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 22}
+        - {x: 0, y: -22}
+        - {x: 140, y: -22}
+        - {x: 140, y: 22}
+      tessellationDetail: -1
+    - name: MenuItems AutoPlay OFF
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 292
+        width: 140
+        height: 44
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 22}
+        - {x: 0, y: -22}
+        - {x: 140, y: -22}
+        - {x: 140, y: 22}
+      tessellationDetail: -1
+    - name: MenuItems About
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 292
+        width: 140
+        height: 44
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 22}
+        - {x: 0, y: -22}
+        - {x: 140, y: -22}
+        - {x: 140, y: 22}
+      tessellationDetail: -1
+    - name: MenuItems 1
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 292
+        width: 140
+        height: 44
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 22}
+        - {x: 0, y: -22}
+        - {x: 140, y: -22}
+        - {x: 140, y: 22}
+      tessellationDetail: -1
+    - name: MenuItems Song1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 244
+        width: 140
+        height: 44
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 22}
+        - {x: 0, y: -22}
+        - {x: 140, y: -22}
+        - {x: 140, y: 22}
+      tessellationDetail: -1
+    - name: MenuItems Song2
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 243
+        width: 140
+        height: 44
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 22}
+        - {x: 0, y: -22}
+        - {x: 140, y: -22}
+        - {x: 140, y: 22}
+      tessellationDetail: -1
+    - name: MenuItems Song Choice
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 244
+        width: 140
+        height: 44
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 22}
+        - {x: 0, y: -22}
+        - {x: 140, y: -22}
+        - {x: 140, y: 22}
+      tessellationDetail: -1
+    - name: MenuItems 2
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 244
+        width: 140
+        height: 44
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 22}
+        - {x: 0, y: -22}
+        - {x: 140, y: -22}
+        - {x: 140, y: 22}
+      tessellationDetail: -1
+    - name: MenuItems Calibrate OFf
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 195
+        width: 140
+        height: 44
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 22}
+        - {x: 0, y: -22}
+        - {x: 140, y: -22}
+        - {x: 140, y: 22}
+      tessellationDetail: -1
+    - name: MenuItems Calibrate On
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 195
+        width: 140
+        height: 44
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 22}
+        - {x: 0, y: -22}
+        - {x: 140, y: -22}
+        - {x: 140, y: 22}
+      tessellationDetail: -1
+    - name: MenuItems 3
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 196
+        width: 140
+        height: 44
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 22}
+        - {x: 0, y: -22}
+        - {x: 140, y: -22}
+        - {x: 140, y: 22}
+      tessellationDetail: -1
+    - name: MenuItems Speed
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 196
+        width: 140
+        height: 44
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 22}
+        - {x: 0, y: -22}
+        - {x: 140, y: -22}
+        - {x: 140, y: 22}
+      tessellationDetail: -1
+    - name: MenuItems Fantastic
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 147
+        width: 140
+        height: 44
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 22}
+        - {x: 0, y: -22}
+        - {x: 140, y: -22}
+        - {x: 140, y: 22}
+      tessellationDetail: -1
+    - name: MenuItems 4
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 147
+        width: 140
+        height: 44
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 22}
+        - {x: 0, y: -22}
+        - {x: 140, y: -22}
+        - {x: 140, y: 22}
+      tessellationDetail: -1
+    - name: MenuItems Real-Time
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 146
+        width: 140
+        height: 44
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 22}
+        - {x: 0, y: -22}
+        - {x: 140, y: -22}
+        - {x: 140, y: 22}
+      tessellationDetail: -1
+    - name: MenuItems Speed 75
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 147
+        width: 140
+        height: 44
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 22}
+        - {x: 0, y: -22}
+        - {x: 140, y: -22}
+        - {x: 140, y: 22}
+      tessellationDetail: -1
+    - name: MenuItems Quit
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 98
+        width: 140
+        height: 44
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 22}
+        - {x: 0, y: -22}
+        - {x: 140, y: -22}
+        - {x: 140, y: 22}
+      tessellationDetail: -1
+    - name: MenuItems Speed 50
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 97
+        width: 140
+        height: 44
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 22}
+        - {x: 0, y: -22}
+        - {x: 140, y: -22}
+        - {x: 140, y: 22}
+      tessellationDetail: -1
+    - name: MenuItems Speed 25
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 97
+        width: 140
+        height: 44
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 22}
+        - {x: 0, y: -22}
+        - {x: 140, y: -22}
+        - {x: 140, y: 22}
+      tessellationDetail: -1
+    - name: MenuItems 5
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 97
+        width: 140
+        height: 44
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 22}
+        - {x: 0, y: -22}
+        - {x: 140, y: -22}
+        - {x: 140, y: 22}
+      tessellationDetail: -1
+    - name: MenuItems 6
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 50
+        width: 140
+        height: 44
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 22}
+        - {x: 0, y: -22}
+        - {x: 140, y: -22}
+        - {x: 140, y: 22}
+      tessellationDetail: -1
+    - name: MenuItems 7
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 49
+        width: 140
+        height: 44
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 22}
+        - {x: 0, y: -22}
+        - {x: 140, y: -22}
+        - {x: 140, y: 22}
+      tessellationDetail: -1
+    - name: MenuItems 8
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 49
+        width: 140
+        height: 44
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 22}
+        - {x: 0, y: -22}
+        - {x: 140, y: -22}
+        - {x: 140, y: 22}
+      tessellationDetail: -1
+    - name: MenuItems BACK
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 49
+        width: 140
+        height: 44
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 22}
+        - {x: 0, y: -22}
+        - {x: 140, y: -22}
+        - {x: 140, y: 22}
+      tessellationDetail: -1
+    - name: MenuItems Options
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 140
+        height: 44
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 22}
+        - {x: 0, y: -22}
+        - {x: 140, y: -22}
+        - {x: 140, y: 22}
+      tessellationDetail: -1
+    - name: MenuItems Close Menu
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 0
+        width: 140
+        height: 44
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 22}
+        - {x: 0, y: -22}
+        - {x: 140, y: -22}
+        - {x: 140, y: 22}
+      tessellationDetail: -1
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
