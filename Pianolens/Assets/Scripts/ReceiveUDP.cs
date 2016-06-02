@@ -13,11 +13,10 @@ public class ReceiveUDP : MonoBehaviour
 
 #if !UNITY_EDITOR
     DatagramSocket socket;
-#endif
+
     // use this for initialization
     async void Start()
     {
-#if !UNITY_EDITOR
         messages = new List<String>();
 
         Debug.Log("Waiting for a connection...");
@@ -37,11 +36,20 @@ public class ReceiveUDP : MonoBehaviour
         }
 
         Debug.Log("exit start");
+#else
+    // use this for initialization
+    void Start()
+    {
+        messages = new List<String>();
+
+        Debug.Log("Networking disabled in editor...");
+
+        Debug.Log("exit start");
 #endif
     }
 
-    // Update is called once per frame
-    void Update()
+// Update is called once per frame
+void Update()
     {
         foreach (String message in messages)
         {
