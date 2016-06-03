@@ -60,7 +60,8 @@ public class SheetMusicCycle : MonoBehaviour {
     GameObject[] StaffLine10 = new GameObject[4];
     
 
-    int currentBar;
+    int CurrentBar;
+    int LastBar = 0;
 
     Bar bar;
     Bar bar_prev1;
@@ -122,64 +123,67 @@ public class SheetMusicCycle : MonoBehaviour {
         StaffLine9[3] = GameObject.Find("StaffLine9_next2");
         StaffLine10[3] = GameObject.Find("StaffLine10_next2");
 
-        currentBar = 0;
-        StartCoroutine(NextBar());
+        CurrentBar = 0;
     }
 
     // Update is called once per frame
     void Update() {
+        CurrentBar = Timing.GetCurrentBar();
+        if (CurrentBar != LastBar)
+        {
+            NextBar(CurrentBar - 1);
+        }
+        LastBar = CurrentBar;
+
         GameObject playhead = GameObject.Find("Playhead");
         Vector3 oldpos = playhead.transform.position;
         playhead.transform.position = new Vector3(GetPositionFromBeat(Timing.GetCurrentBeat(), 0), oldpos.y, oldpos.z);
     }
 
-    IEnumerator NextBar()
+    void NextBar(int currentBar)
     {
-        while (true)
+        // Check if song is null, and continue checking until it is not
+        if (song == null)
         {
-            // Check if song is null, and continue checking until it is not
-            if (song == null)
+            song = Song.GetCurrentSong();
+        }
+        else
+        {
+            ClearBar();
+
+            if (currentBar == 0)
             {
-                song = Song.GetCurrentSong();
+                bar_prev1 = new Bar(new List<Note>());
             }
             else
             {
-                ClearBar();
-
-                bar_prev1 = bar;
-                bar = song.GetBars()[currentBar];
-
-                if (currentBar + 1 >= song.GetBars().Count)
-                {
-                    bar_next1 = new Bar(new List<Note>());
-                }
-                else
-                {
-                    bar_next1 = song.GetBars()[currentBar+1];
-                }
-
-                if (currentBar + 2 >= song.GetBars().Count)
-                {
-                    bar_next2 = new Bar(new List<Note>());
-                }
-                else
-                {
-                    bar_next2 = song.GetBars()[currentBar+2];
-                }
-
-                RenderBar(bar, 0, false); // 0 is current bar
-                RenderBar(bar_prev1, 1, true); // 0 is current bar
-                RenderBar(bar_next1, 2, true); // 0 is current bar
-                RenderBar(bar_next2, 3, true); // 0 is current bar
-                currentBar++;
-                if (currentBar >= song.GetBars().Count)
-                {
-                    currentBar = 0;
-                    ResetBars();
-                }
+                bar_prev1 = song.GetBars()[currentBar-1];
             }
-            
-            yield return new WaitForSeconds(3);
+
+            bar = song.GetBars()[currentBar];
+
+            if (currentBar + 1 >= song.GetBars().Count)
+            {
+                bar_next1 = new Bar(new List<Note>());
+            }
+            else
+            {
+                bar_next1 = song.GetBars()[currentBar+1];
+            }
+
+            if (currentBar + 2 >= song.GetBars().Count)
+            {
+                bar_next2 = new Bar(new List<Note>());
+            }
+            else
+            {
+                bar_next2 = song.GetBars()[currentBar+2];
+            }
+
+            RenderBar(bar, 0, false); // 0 is current bar
+            RenderBar(bar_prev1, 1, true); // 0 is current bar
+            RenderBar(bar_next1, 2, true); // 0 is current bar
+            RenderBar(bar_next2, 3, true); // 0 is current bar
         }
     }
 
@@ -291,8 +295,8 @@ public class SheetMusicCycle : MonoBehaviour {
         float z = StaffLine5[whichBar].transform.position.z;
 
         float y = 0;
-        float betweenLineDistance = (currentBar != 0) ? BETWEEN_STAFF_LINE_DISTANCE_small : BETWEEN_STAFF_LINE_DISTANCE;
-        float lineOffset = (currentBar != 0) ? LINE_OFFSET_small : LINE_OFFSET;
+        float betweenLineDistance = (CurrentBar != 0) ? BETWEEN_STAFF_LINE_DISTANCE_small : BETWEEN_STAFF_LINE_DISTANCE;
+        float lineOffset = (CurrentBar != 0) ? LINE_OFFSET_small : LINE_OFFSET;
 
         try
         {
