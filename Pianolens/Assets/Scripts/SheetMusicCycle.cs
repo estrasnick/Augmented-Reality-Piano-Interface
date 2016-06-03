@@ -128,7 +128,9 @@ public class SheetMusicCycle : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-
+        GameObject playhead = GameObject.Find("Playhead");
+        Vector3 oldpos = playhead.transform.position;
+        playhead.transform.position = new Vector3(GetPositionFromBeat(Timing.GetCurrentBeat(), 0), oldpos.y, oldpos.z);
     }
 
     IEnumerator NextBar()
@@ -280,7 +282,7 @@ public class SheetMusicCycle : MonoBehaviour {
         float x = 0;
         try
         {
-            x = (StaffLine5[whichBar].GetComponent<Renderer>().bounds.size.x * .95f) * ((float)note.GetStartingBeat() / (song.GetBeatsPerMeasure() + 1)) + MusicSheet[whichBar].transform.position.x - (.4f * StaffLine5[whichBar].GetComponent<Renderer>().bounds.size.x);
+            x = GetPositionFromBeat((float)note.GetStartingBeat(), whichBar);
         } catch (Exception e)
         {
             Debug.Log("note position fail");
@@ -390,6 +392,11 @@ public class SheetMusicCycle : MonoBehaviour {
         //Debug.Log("X: " + x + ", Y: " + y + ", Z: " + z);
 
         return new Vector3(x, y, z);
+    }
+
+    float GetPositionFromBeat(float beat, int whichBar)
+    {
+        return (StaffLine5[whichBar].GetComponent<Renderer>().bounds.size.x * .95f) * (beat / (song.GetBeatsPerMeasure() + 1)) + MusicSheet[whichBar].transform.position.x - (.4f * StaffLine5[whichBar].GetComponent<Renderer>().bounds.size.x);
     }
 
     void ResetBars()
