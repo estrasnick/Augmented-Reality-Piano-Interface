@@ -139,4 +139,9 @@ public class Timing : MonoBehaviour {
     {
         LoopMode = loopMode;
     }
+
+    public static int GetCurrentBPM()
+    {
+        return (int) CurrentBPM;
+    }
 }
