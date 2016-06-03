@@ -26,6 +26,8 @@ public class SheetMusicCycle : MonoBehaviour {
     public Transform half_rest;
     public Transform eighth_rest;
 
+    public Transform ledger_line;
+
     GameObject MusicSheet;
     Vector3 MusicSheetLoc;
 
@@ -136,6 +138,8 @@ public class SheetMusicCycle : MonoBehaviour {
             Debug.Log("note position fail");
         }
 
+        float z = GameObject.Find("StaffLine5").transform.position.z;
+
         float y = 0;
         try
         {
@@ -179,6 +183,12 @@ public class SheetMusicCycle : MonoBehaviour {
                     break;
                 case Note.B_2:
                     y = GameObject.Find("StaffLine6").transform.position.y + BETWEEN_STAFF_LINE_DISTANCE;
+                    break;
+                case Note.C_3:
+                    y = GameObject.Find("StaffLine6").transform.position.y + BETWEEN_STAFF_LINE_DISTANCE + BETWEEN_STAFF_LINE_DISTANCE;
+                    
+                    // we need to add a ledger line, halfway between the two staves
+                    Instantiate(ledger_line, new Vector3(x, .5f * (GameObject.Find("StaffLine6").transform.position.y + GameObject.Find("StaffLine5").transform.position.y), z), Quaternion.identity);
                     break;
                 case Note.D_3:
                     y = GameObject.Find("StaffLine5").transform.position.y - BETWEEN_STAFF_LINE_DISTANCE;
@@ -224,7 +234,7 @@ public class SheetMusicCycle : MonoBehaviour {
            // Debug.Log("Y");
         }
 
-float z = GameObject.Find("StaffLine5").transform.position.z;
+        
 
         //Debug.Log("X: " + x + ", Y: " + y + ", Z: " + z);
 

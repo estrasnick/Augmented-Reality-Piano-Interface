@@ -1,10 +1,28 @@
 fileFormatVersion: 2
 guid: 1f3ea7dcf0058ff408e02410aa877c50
-timeCreated: 1464155223
+timeCreated: 1464922093
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - quarter_note: {fileID: 400020, guid: 954cbd4487e85bb4c854ba418259f12e, type: 2}
+  - whole_note: {fileID: 400020, guid: 89fd957adcf589d4e98d82a8d1c59aba, type: 2}
+  - half_note: {fileID: 400020, guid: 821186a84a914984180dd75a95ec494c, type: 2}
+  - eighth_note: {fileID: 400020, guid: c209967a5ce303246a9d2f8523cbd19a, type: 2}
+  - sixteenth_note: {fileID: 400020, guid: 0fd1d2f1032fd874b8414b94d065341e, type: 2}
+  - dotted_quarter_note: {fileID: 400020, guid: 71a164126e6ee1c4c986813086517d5a,
+      type: 2}
+  - dotted_whole_note: {fileID: 400020, guid: 09412ebbab116df4884a8349642066a0, type: 2}
+  - dotted_half_note: {fileID: 400020, guid: 1338df909ad479e4d91210cd5c3e83ba, type: 2}
+  - dotted_eighth_note: {fileID: 400020, guid: 613a2fcafe2002e47a99164749028555, type: 2}
+  - dotted_sixteenth_note: {fileID: 400010, guid: 494893b7ceb208e4292aba99e6a514ff,
+      type: 2}
+  - quarter_rest: {fileID: 447328, guid: 5798a2a31315c364eb4104a50f5d7161, type: 2}
+  - whole_rest: {fileID: 445230, guid: 58e288957b815014aa17f7b7b73ca3ca, type: 2}
+  - half_rest: {fileID: 489062, guid: 3e3e334c07b18974d9684eb9fd3945b2, type: 2}
+  - eighth_rest: {fileID: 407514, guid: 146d91a3b452c19488ba9d011d52a63a, type: 2}
+  - ledger_line: {fileID: 4000012843476056, guid: 3b382445f57acd940bf3f5dd9de8a73a,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
