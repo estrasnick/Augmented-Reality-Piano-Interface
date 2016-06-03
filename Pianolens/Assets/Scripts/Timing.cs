@@ -17,6 +17,8 @@ public class Timing : MonoBehaviour {
     public static float CurrentBPM; // The current BPM of the song.
 
     public static bool IsPaused = false;
+    public static bool LoopMode = true;
+
     static float LastTime;
 
     // Use this for initialization
@@ -57,8 +59,18 @@ public class Timing : MonoBehaviour {
                     {
                         CurrentBeat -= BeatsPerMeasure;
                         CurrentBar++;
+
+                        if (CurrentBar > Song.GetBars().Count)
+                        {
+                            CurrentBar = 1;
+                            if (!LoopMode)
+                            {
+                                IsPaused = true;
+                            }
+                        }
                     }
 
+                    
                     
                 }
                 LastTime = currentTime;
@@ -116,5 +128,15 @@ public class Timing : MonoBehaviour {
     public static int GetCurrentBar()
     {
         return CurrentBar;
+    }
+
+    public static bool IsLoopMode()
+    {
+        return LoopMode;
+    }
+
+    public static void SetLoopMode(bool loopMode)
+    {
+        LoopMode = loopMode;
     }
 }
