@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4505586, g: 0.5006319, b: 0.5758055, a: 1}
+  m_IndirectSpecularColor: {r: 0.45055848, g: 0.50063163, b: 0.5758049, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -11941,7 +11941,7 @@ GameObject:
   - 23: {fileID: 1793926727}
   - 114: {fileID: 1793926730}
   m_Layer: 8
-  m_Name: UpButton
+  m_Name: DownButton
   m_TagString: Up
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13686,7 +13686,7 @@ GameObject:
   - 23: {fileID: 2022505463}
   - 114: {fileID: 2022505466}
   m_Layer: 8
-  m_Name: DownButton
+  m_Name: UpButton
   m_TagString: Down
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
