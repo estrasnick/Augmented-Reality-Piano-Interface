@@ -73,11 +73,21 @@ public class SheetMusicCycle : MonoBehaviour {
     Bar bar_next2;
 
 
+    //EVENT MANAGEMENT:
+    #region event_management
+    ArrayList events;
+    int currentEvent; //the next event to be handled, maybe.
+    HighlightEveryKey keyHighlighter;
+    #endregion
+
     // Use this for initialization
     void Start() {
         song = Song.GetCurrentSong();
+        keyHighlighter = GameObject.FindObjectOfType<HighlightEveryKey>();
+
         ResetBars();
 
+        #region gameObject_lockdown
         MusicSheet[0] = GameObject.Find("MusicSheet");
         MusicSheet[1] = GameObject.Find("MusicSheet_prev1");
         MusicSheet[2] = GameObject.Find("MusicSheet_next1");
@@ -127,6 +137,8 @@ public class SheetMusicCycle : MonoBehaviour {
         StaffLine9[3] = GameObject.Find("StaffLine9_next2");
         StaffLine10[3] = GameObject.Find("StaffLine10_next2");
 
+        #endregion
+
         CurrentBar = 0;
     }
 
@@ -139,6 +151,27 @@ public class SheetMusicCycle : MonoBehaviour {
         }
         LastBar = CurrentBar;
 
+
+        //figure out what events happened in the last frame and handle it!
+        if (song != null)
+        {
+            while (true)
+            {
+                SongEvent e = (SongEvent)events[currentEvent];
+                if (e.measureNumber <= ((float)Timing.GetCurrentBar() * Timing.BeatsPerMeasure + Timing.CurrentBeat))
+                {
+                    //process e.
+                    keyHighlighter.SetKeyHighlight(e.isStart, e.keyID);
+                    currentEvent++;
+                    if(currentEvent > events.Count)
+                    {
+                        currentEvent = 0;
+                    }
+                }
+                else { break; }
+            }
+        }
+
         GameObject playhead = GameObject.Find("Playhead");
         Vector3 oldpos = playhead.transform.position;
         playhead.transform.position = new Vector3(GetPositionFromBeat(Timing.GetCurrentBeat(), 0), oldpos.y, oldpos.z);
@@ -150,6 +183,9 @@ public class SheetMusicCycle : MonoBehaviour {
         if (song == null)
         {
             song = Song.GetCurrentSong();
+            events = SongAnalyzer.generateEventList(song);
+            currentEvent = 0;
+
         }
         else
         {
@@ -157,6 +193,7 @@ public class SheetMusicCycle : MonoBehaviour {
 
             if (currentBar == 0)
             {
+                currentEvent = 0;
                 bar_prev1 = new Bar(new List<Note>());
             }
             else
@@ -413,5 +450,6 @@ public class SheetMusicCycle : MonoBehaviour {
         bar_prev1 = new Bar(new List<Note>());
         bar_next1 = new Bar(new List<Note>());
         bar_next2 = new Bar(new List<Note>());
+        currentEvent = 0;
     }
 }

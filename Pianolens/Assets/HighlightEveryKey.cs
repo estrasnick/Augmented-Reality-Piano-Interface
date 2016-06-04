@@ -47,8 +47,8 @@ public class HighlightEveryKey : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update () {
-        if (Random.Range(0, MAX_KEY_INDEX) < 2)
+    //void Update () {
+       /* if (Random.Range(0, MAX_KEY_INDEX) < 2)
         {
             // TODO: This isn't going to be random in the end. This is going to have
             // an understanding of the music that needs to be played. For example, 
@@ -65,11 +65,11 @@ public class HighlightEveryKey : MonoBehaviour {
             {
                 SetKeyHighlight(true, i);
             }
-        }
-    }
+        }*/
+    //}
 
     // Highlight the key
-    private void SetKeyHighlight(bool isHighlight, int keyIndex)
+    public void SetKeyHighlight(bool isHighlight, int keyIndex)
     {
         if (!isHighlight)
         {

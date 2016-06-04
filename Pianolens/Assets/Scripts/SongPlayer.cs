@@ -6,12 +6,12 @@ public struct SongEvent
     public bool isStart;
     public int keyID;
     public Note.Note_Types noteType;
-    public int measureNumber;
+    public float measureNumber;
 
-    public SongEvent(bool v1, int v2, Note.Note_Types note_Types, int v3) : this()
+    public SongEvent(bool isStart, int keyID, Note.Note_Types note_Types, float v3) : this()
     {
-        this.isStart = v1;
-        this.keyID = v2;
+        this.isStart = isStart;
+        this.keyID = keyID;
         this.noteType = note_Types;
         this.measureNumber = v3;
     }
@@ -39,16 +39,14 @@ public static class SongAnalyzer
     public static ArrayList generateEventList(Song s)
     {
         ArrayList l = new ArrayList();
-        int ticks = 0;
-        int barNum = 0;
-        int ticksPerBar = 0;
+        int barNum = 1;
         foreach(Bar b in s.GetBars())
         {
             foreach(Note n in b.GetNotes())
             {
                 //TODO: add actual measure calculation here.
-                l.Add(new SongEvent(true, n.GetPianoKey(), n.GetNoteType(), 20));
-                l.Add(new SongEvent(false, n.GetPianoKey(), n.GetNoteType(), 20));
+                l.Add(new SongEvent(true, n.GetPianoKey(), n.GetNoteType(), barNum * Timing.BeatsPerMeasure + n.GetStartingBeat()));
+                l.Add(new SongEvent(false, n.GetPianoKey(), n.GetNoteType(), barNum * Timing.BeatsPerMeasure + n.GetStartingBeat()+n.GetDuration()));
             }
             barNum++;
         }

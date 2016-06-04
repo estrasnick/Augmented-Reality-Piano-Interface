@@ -45,6 +45,7 @@ public class Song
 
     public Song(int id, string title, string composer, int key, int beatsPerMeasure, int beatUnit, List<Bar> bars, int defaultBPM, int currentBPM = -1)
     {
+
         if (currentBPM == -1)
         {
             CurrentBPM = defaultBPM;
@@ -132,6 +133,7 @@ public class Bar
 
 public class Note
 {
+    #region consts
     public const int Rest_Treble = 0;
     public const int Rest_Bass = 1;
     public const int A_minus1 = 21;
@@ -274,7 +276,7 @@ public class Note
     public const int Asharp_7 = 118;
     public const int Bflat_7 = 118;
     public const int B_7 = 119;
-
+    #endregion
     public enum Note_Types 
     {
         quarter_note,
@@ -303,6 +305,26 @@ public class Note
         StartingBeat = startingBeat;
         PianoKey = pianoKey;
         Note_Type = note_type;
+    }
+
+    public float GetDuration()
+    {
+        switch (Note_Type)
+        {
+            case Note_Types.quarter_note:
+            case Note_Types.quarter_rest:
+                return 1f;
+            case Note_Types.half_note:
+            case Note_Types.half_rest:
+                return 2f;
+            case Note_Types.whole_note:
+            case Note_Types.whole_rest:
+                return 4f;
+            case Note_Types.eighth_note:
+            case Note_Types.eighth_rest:
+                return 0.5f;
+        }
+        return 0.00003f;
     }
 
     public float GetStartingBeat()
