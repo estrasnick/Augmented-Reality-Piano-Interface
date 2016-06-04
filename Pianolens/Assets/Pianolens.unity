@@ -4616,7 +4616,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 859240228}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fd1d6ccd9233094b9ef6744f84eccf6, type: 3}
   m_Name: 
@@ -7554,6 +7554,41 @@ Prefab:
     - target: {fileID: 4000012523715974, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011149494352, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: sheetMusicText
+      value: 
+      objectReference: {fileID: 1956499918}
+    - target: {fileID: 114000012948136066, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: changeColorOnActivate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012948136066, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: changeColorOnHover
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012948136066, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: resetOnActivate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011230064982, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: changeColorOnHover
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011230064982, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: changeColorOnActivate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011230064982, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: resetOnActivate
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672, type: 2}
@@ -12238,7 +12273,7 @@ GameObject:
   - 222: {fileID: 1956499919}
   - 114: {fileID: 1956499918}
   m_Layer: 2
-  m_Name: SheetText
+  m_Name: SheetTextMain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12259,7 +12294,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -5}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1956499918
@@ -12283,10 +12318,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 13
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -12294,9 +12329,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Sheet Music
-
-'
+  m_Text: Ode to Joy
 --- !u!222 &1956499919
 CanvasRenderer:
   m_ObjectHideFlags: 0

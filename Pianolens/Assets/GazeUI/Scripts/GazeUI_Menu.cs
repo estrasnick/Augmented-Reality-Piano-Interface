@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class GazeUI_Menu : MonoBehaviour
 {
+
+    public Text sheetMusicText;
 
     public GameObject introScreen;
 
@@ -12,7 +15,7 @@ public class GazeUI_Menu : MonoBehaviour
     public GameObject songChoiceMenu;
     public GameObject optionsMenu;
 
-    private List<int> currentMenuChoices = new List<int>(); 
+    private List<int> currentMenuChoices = new List<int>();
 
     private List<GameObject> Menus;
 
@@ -34,7 +37,7 @@ public class GazeUI_Menu : MonoBehaviour
 
     void loadSongChoiceMenu()
     {
-        openMenu(songChoiceMenu); 
+        openMenu(songChoiceMenu);
         closeMenu(primaryMenu);
 
         resetActivationFor(GameObject.Find("menuItems_BackToMainMenuFromSongChoiceMenu"));
@@ -42,7 +45,7 @@ public class GazeUI_Menu : MonoBehaviour
 
     void closeSongChoiceMenu()
     {
-        closeMenu(songChoiceMenu); 
+        closeMenu(songChoiceMenu);
         openMenu(primaryMenu);
 
         resetActivationFor(GameObject.Find("menuItems_SongChoice"));
@@ -51,7 +54,7 @@ public class GazeUI_Menu : MonoBehaviour
 
     void loadOptionsMenu()
     {
-        openMenu(optionsMenu); 
+        openMenu(optionsMenu);
         closeMenu(primaryMenu);
 
         resetActivationFor(GameObject.Find("menuItems_OptionsMenuBackToMainBtn"));
@@ -60,7 +63,7 @@ public class GazeUI_Menu : MonoBehaviour
 
     void closeOptionsMenu()
     {
-        closeMenu(optionsMenu); 
+        closeMenu(optionsMenu);
         openMenu(primaryMenu);
 
         resetActivationFor(GameObject.Find("menuItems_Options"));
@@ -80,22 +83,29 @@ public class GazeUI_Menu : MonoBehaviour
 
     #region Button Activation Functions
 
-    void setSong1() {
-        print("Song1");
-    } 
-    void setSong2() {
-        print("Song2");
+    void setSong1()
+    {
+        sheetMusicText.text = "Ode to Joy";
+        closeSongChoiceMenu();
+        mainMenu.SetActive(false);
+    }
+    void setSong2()
+    {
+        sheetMusicText.text = "Clair de Lune";
+        closeSongChoiceMenu();
+        mainMenu.SetActive(false);
     }
 
     //same with toggles :)
-    void turnAutoplayOff() { print("Turning Autoplay Off"); currentMenuChoices[0] = 0; } 
+    void turnAutoplayOff() { print("Turning Autoplay Off"); currentMenuChoices[0] = 0; }
     void turnAutoplayOn() { print("Turning Autoplay On"); currentMenuChoices[0] = 1; }
 
-    void turnCalibrationOff() { print("Turning Calibration Controls Off"); currentMenuChoices[1] = 0; } 
+    void turnCalibrationOff() { print("Turning Calibration Controls Off"); currentMenuChoices[1] = 0; }
     void turnCalibrationOn() { print("Turning Calibration Controls On"); currentMenuChoices[1] = 1; }
 
     // and this just makes something visible or not
-    void showAboutScreen() {
+    void showAboutScreen()
+    {
         introScreen.SetActive(true);
         mainMenu.SetActive(false);
     }
