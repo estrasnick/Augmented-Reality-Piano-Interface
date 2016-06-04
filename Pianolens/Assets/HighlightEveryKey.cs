@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public class HighlightEveryKey : MonoBehaviour {
     private const int MAX_KEY_INDEX = 108;
+    public const float PIXELPERBEAT = 0.06f; //80 pixels per beat.
+
     bool[] keyIsHighlighted = new bool[MAX_KEY_INDEX + 1];
     private PianoDescriptor p;
     private Vector3 start;
@@ -93,6 +95,37 @@ public class HighlightEveryKey : MonoBehaviour {
             //GameObject.Add
             keyIsHighlighted[keyIndex] = true;
         }
+    }
+
+    public void AddPianoRollItem(SongEvent e, float futureTick)
+    {
+
+        Vector3[] keyWidth = PianoDescriptor.getPianoDescriptor().getKeyWidth(e.keyID, false);
+        float girth = (keyWidth[0] - keyWidth[1]).magnitude;
+        float duration = Note.GetDuration(e.noteType);
+        float length = PIXELPERBEAT * duration;
+
+        float center = e.measureNumber - Timing.CurrentMeasure - duration / 2f;
+        float z_depth = center * PIXELPERBEAT;
+
+        Vector3 midpoint = ((keyWidth[0] + keyWidth[1]) / 2f);
+        float x_center = midpoint.x;
+
+        float y_center = midpoint.y;
+
+        GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        cube.GetComponent<MeshRenderer>().sharedMaterial = highlightMatRef;
+        cube.name = "rolling" + e.keyID.ToString().PadLeft('0');
+        cube.tag = "PianoRoll";
+        PianoRoll r = cube.AddComponent<PianoRoll>();
+        r.e = e;
+        r.midPoint = e.measureNumber;
+
+        cube.transform.parent = stage.transform;
+        cube.transform.position = stage.transform.position + new Vector3(x_center, y_center, z_depth);
+        //print(pos[0]);
+        cube.transform.localScale = new Vector3(girth, 0.01f, length);
+        //GameObject.Add
     }
 }
 

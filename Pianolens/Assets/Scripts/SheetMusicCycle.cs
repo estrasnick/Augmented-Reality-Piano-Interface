@@ -77,6 +77,7 @@ public class SheetMusicCycle : MonoBehaviour {
     #region event_management
     ArrayList events;
     int currentEvent; //the next event to be handled, maybe.
+    int pianoRollEvent;
     HighlightEveryKey keyHighlighter;
     #endregion
 
@@ -155,7 +156,8 @@ public class SheetMusicCycle : MonoBehaviour {
         //figure out what events happened in the last frame and handle it!
         if (song != null)
         {
-            while (true)
+            //key highlighting.
+            while (currentEvent < events.Count)
             {
                 SongEvent e = (SongEvent)events[currentEvent];
                 if (e.measureNumber <= ((float)Timing.GetCurrentBar() * Timing.BeatsPerMeasure + Timing.CurrentBeat))
@@ -163,18 +165,35 @@ public class SheetMusicCycle : MonoBehaviour {
                     //process e.
                     keyHighlighter.SetKeyHighlight(e.isStart, e.keyID);
                     currentEvent++;
-                    if(currentEvent > events.Count)
-                    {
-                        currentEvent = 0;
-                    }
                 }
                 else { break; }
             }
+
+            //piano roll
+            float futureTick = Timing.CurrentMeasure + 2*Timing.BeatsPerMeasure;
+            while (pianoRollEvent < events.Count)
+            {
+                SongEvent e = (SongEvent)events[pianoRollEvent];
+                if (e.measureNumber <= futureTick)
+                {
+                    //process e.
+                    startDroplet(e, futureTick);
+                    pianoRollEvent++;
+                }
+                else { break; }
+            }
+
         }
 
         GameObject playhead = GameObject.Find("Playhead");
         Vector3 oldpos = playhead.transform.position;
         playhead.transform.position = new Vector3(GetPositionFromBeat(Timing.GetCurrentBeat(), 0), oldpos.y, oldpos.z);
+    }
+
+    private void startDroplet(SongEvent e, float currentMeasure)
+    {
+        if (e.isStart) return;
+        keyHighlighter.AddPianoRollItem(e, currentMeasure);
     }
 
     void NextBar(int currentBar)
@@ -185,6 +204,7 @@ public class SheetMusicCycle : MonoBehaviour {
             song = Song.GetCurrentSong();
             events = SongAnalyzer.generateEventList(song);
             currentEvent = 0;
+            pianoRollEvent = 0;
 
         }
         else
@@ -194,6 +214,7 @@ public class SheetMusicCycle : MonoBehaviour {
             if (currentBar == 0)
             {
                 currentEvent = 0;
+                pianoRollEvent = 0;
                 bar_prev1 = new Bar(new List<Note>());
             }
             else

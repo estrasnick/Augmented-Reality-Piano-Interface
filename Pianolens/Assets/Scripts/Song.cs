@@ -309,20 +309,25 @@ public class Note
 
     public float GetDuration()
     {
-        switch (Note_Type)
+        return GetDuration(Note_Type);
+    }
+
+    static public float GetDuration(Note_Types t)
+    {
+        switch (t)
         {
             case Note_Types.quarter_note:
             case Note_Types.quarter_rest:
-                return 1f;
+                return 1f-0.005f;
             case Note_Types.half_note:
             case Note_Types.half_rest:
-                return 2f;
+                return 2f-0.005f;
             case Note_Types.whole_note:
             case Note_Types.whole_rest:
-                return 4f;
+                return 4f-0.005f;
             case Note_Types.eighth_note:
             case Note_Types.eighth_rest:
-                return 0.5f;
+                return 0.5f-0.005f;
         }
         return 0.00003f;
     }

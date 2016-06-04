@@ -17,6 +17,9 @@ TagManager:
   - ZoomIn
   - ZoomOut
   - HighlightedKey
+  - MicroNotes
+  - NoTouchButton
+  - PianoRoll
   layers:
   - Default
   - TransparentFX

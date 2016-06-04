@@ -15,6 +15,7 @@ public class Timing : MonoBehaviour {
     public static int CurrentBar; // The current bar in the song. The first bar is 1.
     public static float CurrentBeat; // The current position in the bar, in beats. The first beat is 1.
     public static float CurrentBPM; // The current BPM of the song.
+    public static float CurrentMeasure;
 
     public static bool IsPaused = false;
     public static bool LoopMode = true;
@@ -70,8 +71,8 @@ public class Timing : MonoBehaviour {
                         }
                     }
 
-                    
-                    
+                    CurrentMeasure = (((float)CurrentBar) * Timing.BeatsPerMeasure + Timing.CurrentBeat);
+
                 }
                 LastTime = currentTime;
             }
@@ -91,6 +92,8 @@ public class Timing : MonoBehaviour {
 
         CurrentBar = 1;
         CurrentBeat = 1;
+        CurrentMeasure = (((float)CurrentBar) * Timing.BeatsPerMeasure + Timing.CurrentBeat);
+
         CurrentBPM = (float) Song.GetCurrentBPM();
         Debug.Log("Updating new song. Time signature: " + BeatsPerMeasure + "/" + BeatUnit + ", BPM: " + CurrentBPM);
     }
