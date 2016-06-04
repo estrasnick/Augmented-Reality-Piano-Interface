@@ -12,7 +12,8 @@ public class SheetMusicCycle : MonoBehaviour {
     static float LINE_OFFSET_small = .00625f;
 
     Song song;
-    
+
+    #region notes
     public Transform quarter_note;
     public Transform whole_note;
     public Transform half_note;
@@ -43,6 +44,9 @@ public class SheetMusicCycle : MonoBehaviour {
     public Transform half_rest_small;
     public Transform eighth_rest_small;
 
+    #endregion
+
+    #region staff_stuff
     public Transform ledger_line;
     public Transform ledger_line_small;
 
@@ -58,7 +62,7 @@ public class SheetMusicCycle : MonoBehaviour {
     GameObject[] StaffLine8 = new GameObject[4];
     GameObject[] StaffLine9 = new GameObject[4];
     GameObject[] StaffLine10 = new GameObject[4];
-    
+    #endregion
 
     int CurrentBar;
     int LastBar = 0;
