@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class GazeUI_Menu : MonoBehaviour
 {
+    public GameObject calibratorButton;
+    public GameObject calibrator;
 
     public Text sheetMusicText;
 
@@ -100,8 +102,8 @@ public class GazeUI_Menu : MonoBehaviour
     void turnAutoplayOff() { print("Turning Autoplay Off"); currentMenuChoices[0] = 0; }
     void turnAutoplayOn() { print("Turning Autoplay On"); currentMenuChoices[0] = 1; }
 
-    void turnCalibrationOff() { print("Turning Calibration Controls Off"); currentMenuChoices[1] = 0; }
-    void turnCalibrationOn() { print("Turning Calibration Controls On"); currentMenuChoices[1] = 1; }
+    void turnCalibrationOff() { calibrator.SetActive(false); calibratorButton.SetActive(false); currentMenuChoices[1] = 0; }
+    void turnCalibrationOn() { calibrator.SetActive(true); calibratorButton.SetActive(true); currentMenuChoices[1] = 1; }
 
     // and this just makes something visible or not
     void showAboutScreen()

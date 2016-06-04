@@ -1152,7 +1152,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1216993297}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &196073059
 Prefab:
@@ -6644,7 +6644,6 @@ Transform:
   - {fileID: 335258823}
   - {fileID: 1640959826}
   - {fileID: 224773424}
-  - {fileID: 1984504237}
   - {fileID: 188190526}
   m_Father: {fileID: 1127973338}
   m_RootOrder: 6
@@ -7589,6 +7588,26 @@ Prefab:
         type: 2}
       propertyPath: resetOnActivate
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011149494352, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: calibratorButton
+      value: 
+      objectReference: {fileID: 1640959825}
+    - target: {fileID: 114000011149494352, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: calibrator
+      value: 
+      objectReference: {fileID: 224773423}
+    - target: {fileID: 114000011632732238, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: CallFunctionOnActivate
+      value: turnCalibrationOff
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011632732238, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: CallFunctionOnDeactivate
+      value: turnCalibrationOn
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672, type: 2}
@@ -9842,6 +9861,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1884533542}
+  - {fileID: 1984504237}
   m_Father: {fileID: 1216993297}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12294,7 +12314,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -5}
+  m_AnchoredPosition: {x: 0, y: -16.400002}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1956499918
@@ -12318,7 +12338,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 13
+    m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -12469,8 +12489,8 @@ Transform:
   m_LocalPosition: {x: 1.175, y: 0.785, z: 2.155}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1216993297}
-  m_RootOrder: 6
+  m_Father: {fileID: 1640959826}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 66.164, z: 0}
 --- !u!1 &1997528739
 GameObject:
