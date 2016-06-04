@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: ebf515194bb7f0341a555c2acc7a93a0
+timeCreated: 1465062917
+licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
     21300000: Banner - Simple Button Timer Styles
@@ -7,15 +9,15 @@ TextureImporter:
     21300004: Banners - How It Works
     21300006: Banners - Other Cool Stuff
     21300008: Banners - One Time Use
-    21300010: Tooltip - Call Function
+    21300010: Tooltip - Speed Down
     21300012: Tooltip - About Turret
     21300014: Tooltip - Flip Switch
     21300016: Tooltip - Horiz Timer
     21300018: Tooltip - Features
     21300020: Tooltip - Vertical Timer
     21300022: Tooltip - Enter the Turret
-    21300024: Tooltip - Ammo Clip
-    21300026: Tooltip - Circular Timer
+    21300024: Tooltip - Speed Up
+    21300026: Tooltip - PlayStop
     21300028: Tooltip - Menu Sample
     21300030: Tooltip - Pick Up Weapon
     21300032: Tooltip - Activate Door
@@ -171,25 +173,25 @@ TextureImporter:
         - {x: 170, y: -26.78238}
         - {x: 171, y: -25.78238}
       tessellationDetail: -1
-    - name: Tooltip - Call Function
+    - name: Tooltip - Speed Down
       rect:
         serializedVersion: 2
-        x: 0
-        y: 322
+        x: 1
+        y: 325
         width: 301
         height: 101
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -127.5, y: 43.365295}
-        - {x: -127.5, y: -31.634705}
-        - {x: -80.5, y: -35.634705}
-        - {x: -68.5, y: -42.634705}
-        - {x: -57.5, y: -42.634705}
-        - {x: -50.5, y: -31.634705}
-        - {x: 127.5, y: -31.634705}
-        - {x: 127.5, y: 43.365295}
+      - - {x: 126.845856, y: 43.402863}
+        - {x: -127.154144, y: 43.402863}
+        - {x: -127.154144, y: -33.597137}
+        - {x: -74.154144, y: -42.597137}
+        - {x: -58.154144, y: -42.597137}
+        - {x: -48.154144, y: -36.597137}
+        - {x: 128.84586, y: -33.597137}
+        - {x: 128.84586, y: 41.402863}
       tessellationDetail: -1
     - name: Tooltip - About Turret
       rect:
@@ -309,27 +311,27 @@ TextureImporter:
         - {x: 127, y: -31.654144}
         - {x: 127, y: 43.345856}
       tessellationDetail: -1
-    - name: Tooltip - Ammo Clip
+    - name: Tooltip - Speed Up
       rect:
         serializedVersion: 2
-        x: 303
-        y: 322
+        x: 302
+        y: 319
         width: 302
         height: 101
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -127.70596, y: 43.365295}
-        - {x: -127.70596, y: -30.634705}
-        - {x: -126.70596, y: -31.634705}
-        - {x: -73.70596, y: -42.634705}
-        - {x: -60.705963, y: -42.634705}
-        - {x: -49.705963, y: -31.634705}
-        - {x: 128.29404, y: -31.634705}
-        - {x: 128.29404, y: 43.365295}
+      - - {x: -127.5518, y: 44.32773}
+        - {x: -127.5518, y: -26.672272}
+        - {x: -125.5518, y: -28.672272}
+        - {x: -81.5518, y: -40.67227}
+        - {x: -59.551804, y: -40.67227}
+        - {x: -46.551804, y: -31.672272}
+        - {x: 128.4482, y: -28.672272}
+        - {x: 128.4482, y: 44.32773}
       tessellationDetail: -1
-    - name: Tooltip - Circular Timer
+    - name: Tooltip - PlayStop
       rect:
         serializedVersion: 2
         x: 303

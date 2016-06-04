@@ -143,6 +143,18 @@ public class Timing : MonoBehaviour {
         LoopMode = loopMode;
     }
 
+    void TogglePlayback()
+    {
+        if (Timing.IsPaused)
+        {
+            Timing.Unpause();
+        }
+        else
+        {
+            Timing.Pause();
+        }
+    }
+
     public static int GetCurrentBPM()
     {
         return (int) CurrentBPM;
