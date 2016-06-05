@@ -51,9 +51,10 @@ public class ReceiveUDP : MonoBehaviour
 // Update is called once per frame
 void Update()
     {
+        GameObject metronome = GameObject.Find("MetronomeInteractive");
+
         foreach (String message in messages)
         {
-            GameObject metronome = GameObject.Find("MetronomeInteractive");
             if (message.Contains("55,"))
             {
                 metronome.SendMessageUpwards("OnSelectDown");

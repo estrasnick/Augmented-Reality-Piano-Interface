@@ -38,6 +38,16 @@ public static class SongAnalyzer
     }
     public static ArrayList generateEventList(Song s)
     {
+        return generateEventList(s, 0f);
+    }
+    /// <summary>
+    /// Generates an event list with a fixed amount of tolerance for each event.
+    /// </summary>
+    /// <param name="s"></param>
+    /// <param name="tolerance">Amount in beats to tolerate issues. Recommended 0.5</param>
+    /// <returns></returns>
+    public static ArrayList generateEventList(Song s, float tolerance)
+    {
         ArrayList l = new ArrayList();
         int barNum = 1;
         foreach(Bar b in s.GetBars())
@@ -45,8 +55,8 @@ public static class SongAnalyzer
             foreach(Note n in b.GetNotes())
             {
                 //TODO: add actual measure calculation here.
-                l.Add(new SongEvent(true, n.GetPianoKey(), n.GetNoteType(), barNum * Timing.BeatsPerMeasure + n.GetStartingBeat()));
-                l.Add(new SongEvent(false, n.GetPianoKey(), n.GetNoteType(), barNum * Timing.BeatsPerMeasure + n.GetStartingBeat()+n.GetDuration()));
+                l.Add(new SongEvent(true, n.GetPianoKey(), n.GetNoteType(), barNum * Timing.BeatsPerMeasure + n.GetStartingBeat() - tolerance));
+                l.Add(new SongEvent(false, n.GetPianoKey(), n.GetNoteType(), barNum * Timing.BeatsPerMeasure + n.GetStartingBeat()+n.GetDuration() + tolerance));
             }
             barNum++;
         }
@@ -56,7 +66,7 @@ public static class SongAnalyzer
     }
 }
 
-public class SongPlayer : MonoBehaviour {
+/*public class SongPlayer : MonoBehaviour {
     Song currentSong;
     ArrayList songEvents;
     int currentSongEventsIndex = 0;
@@ -93,3 +103,4 @@ public class SongPlayer : MonoBehaviour {
 
 	}
 }
+*/
