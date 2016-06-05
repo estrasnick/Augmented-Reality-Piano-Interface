@@ -75,6 +75,8 @@ public class HighlightEveryKey : MonoBehaviour {
     // Highlight the key
     public void SetKeyHighlight(bool isHighlight, int keyIndex)
     {
+        if (keyIndex < 20) return;
+
         if (!isHighlight)
         {
             GameObject g = GameObject.Find("highlighting" + keyIndex.ToString().PadLeft('0'));
