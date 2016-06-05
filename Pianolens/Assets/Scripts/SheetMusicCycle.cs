@@ -193,6 +193,7 @@ public class SheetMusicCycle : MonoBehaviour {
     private void startDroplet(SongEvent e, float currentMeasure)
     {
         if (e.isStart) return;
+        if (e.keyID == 0) return;
         keyHighlighter.AddPianoRollItem(e, currentMeasure);
     }
 
