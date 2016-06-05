@@ -109,7 +109,7 @@ public class HighlightEveryKey : MonoBehaviour {
         float duration = Note.GetDuration(e.noteType);
         float length = PIXELPERBEAT * duration;
 
-        float center = e.measureNumber - Timing.CurrentMeasure - duration / 2f;
+        float center = e.measureNumber - Timing.CurrentMeasure - (duration / 2f);
         float z_depth = center * PIXELPERBEAT;
 
         Vector3 midpoint = ((keyWidth[0] + keyWidth[1]) / 2f);
@@ -123,7 +123,8 @@ public class HighlightEveryKey : MonoBehaviour {
 
         PianoRoll r = cube.AddComponent<PianoRoll>();
         r.e = e;
-        r.midPoint = e.measureNumber;
+        r.endPoint = e.measureNumber;
+        r.duration = duration;
 
         cube.transform.parent = pianoRollContainer.transform;
         cube.transform.localPosition = new Vector3(x_center, y_center, z_depth);

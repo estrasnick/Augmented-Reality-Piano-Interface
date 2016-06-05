@@ -164,6 +164,7 @@ public class SheetMusicCycle : MonoBehaviour {
         //figure out what events happened in the last frame and handle it!
         if (song != null)
         {
+            /*
             //key highlighting.
             while (currentEvent < events.Count)
             {
@@ -175,7 +176,7 @@ public class SheetMusicCycle : MonoBehaviour {
                     currentEvent++;
                 }
                 else { break; }
-            }
+            }*/
 
             //tolerance updating:
             while (toleranceRunner < tolerance.Count)
