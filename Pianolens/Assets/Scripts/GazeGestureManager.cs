@@ -87,8 +87,11 @@ public class GazeGestureManager : MonoBehaviour
                 oldFocusObject = FocusedObject;
             }
 
-            MeshRenderer hitMesh = FocusedObject.GetComponent<MeshRenderer>();
-            hitMesh.material.shader = highlighted;
+            if (FocusedObject.name != "RedLine")
+            {
+                MeshRenderer hitMesh = FocusedObject.GetComponent<MeshRenderer>();
+                hitMesh.material.shader = highlighted;
+            }
         }
         else
         {
@@ -97,8 +100,11 @@ public class GazeGestureManager : MonoBehaviour
 
             if (oldFocusObject != null)
             {
-                MeshRenderer hitMesh = oldFocusObject.GetComponent<MeshRenderer>();
-                hitMesh.material.shader = normal;
+                if (oldFocusObject.name != "RedLine")
+                {
+                    MeshRenderer hitMesh = oldFocusObject.GetComponent<MeshRenderer>();
+                    hitMesh.material.shader = normal;
+                }
             }
         }
 
