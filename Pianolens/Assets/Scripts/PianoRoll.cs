@@ -5,6 +5,7 @@ public class PianoRoll : MonoBehaviour {
 
     public SongEvent e;
     public float midPoint;
+    public float center;
 	// Use this for initialization
 	void Start () {
 	
@@ -12,7 +13,7 @@ public class PianoRoll : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        float center = midPoint - Timing.CurrentMeasure;
+        center = midPoint - Timing.CurrentMeasure;
         print(center);
         if(center < 0)
         {
@@ -20,7 +21,7 @@ public class PianoRoll : MonoBehaviour {
             return;
         }
         float z_depth = center * HighlightEveryKey.PIXELPERBEAT;
-        Vector3 lp = this.transform.localPosition;
-        this.transform.position.Set(lp.x, lp.y, z_depth);
+        Vector3 lp = gameObject.transform.localPosition;
+        gameObject.transform.localPosition = new Vector3(lp.x, lp.y, z_depth);
     }
 }

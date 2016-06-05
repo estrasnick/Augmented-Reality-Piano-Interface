@@ -13,6 +13,7 @@ public class HighlightEveryKey : MonoBehaviour {
 
     public Material highlightMatRef;
     public GameObject stage;
+    public GameObject pianoRollContainer;
 
 	// Use this for initialization
 	void Start () {
@@ -21,6 +22,7 @@ public class HighlightEveryKey : MonoBehaviour {
         GameObject rightAnchor = GameObject.Find("rightAnchor");
         print(rightAnchor);
         stage = GameObject.Find("MainApp");
+        pianoRollContainer = GameObject.Find("PianoRollContainer");
 
         start = stage.transform.InverseTransformPoint(leftAnchor.transform.position); //start and end are relative to stage after all.
         end = stage.transform.InverseTransformPoint(rightAnchor.transform.position);
@@ -110,22 +112,20 @@ public class HighlightEveryKey : MonoBehaviour {
 
         Vector3 midpoint = ((keyWidth[0] + keyWidth[1]) / 2f);
         float x_center = midpoint.x;
-
         float y_center = midpoint.y;
 
         GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
         cube.GetComponent<MeshRenderer>().sharedMaterial = highlightMatRef;
         cube.name = "rolling" + e.keyID.ToString().PadLeft('0');
         cube.tag = "PianoRoll";
+
         PianoRoll r = cube.AddComponent<PianoRoll>();
         r.e = e;
         r.midPoint = e.measureNumber;
 
-        cube.transform.parent = stage.transform;
-        cube.transform.position = stage.transform.position + new Vector3(x_center, y_center, z_depth);
-        //print(pos[0]);
+        cube.transform.parent = pianoRollContainer.transform;
+        cube.transform.localPosition = new Vector3(x_center, y_center, z_depth);
         cube.transform.localScale = new Vector3(girth, 0.01f, length);
-        //GameObject.Add
     }
 }
 
