@@ -10,7 +10,8 @@ using Windows.Networking.Sockets;
 public class ReceiveUDP : MonoBehaviour
 {
     List<String> messages;
-
+    SheetMusicCycle controller;
+    GameObject metronome;
 #if !UNITY_EDITOR
     DatagramSocket socket;
 
@@ -42,6 +43,8 @@ public class ReceiveUDP : MonoBehaviour
     {
         messages = new List<String>();
 
+        controller = GameObject.Find("SheetMusic").GetComponent<SheetMusicCycle>();
+        metronome = GameObject.Find("MetronomeInteractive");
         Debug.Log("Networking disabled in editor...");
 
         Debug.Log("exit start");
@@ -51,10 +54,9 @@ public class ReceiveUDP : MonoBehaviour
 // Update is called once per frame
 void Update()
     {
-        GameObject metronome = GameObject.Find("MetronomeInteractive");
-
         foreach (String message in messages)
         {
+            /*
             if (message.Contains("55,"))
             {
                 metronome.SendMessageUpwards("OnSelectDown");
@@ -62,6 +64,10 @@ void Update()
             else if (message.Contains("57,"))
             {
                 metronome.SendMessageUpwards("OnSelectUp");
+            }*/
+            int val;
+            if (int.TryParse(message.Split(',')[0], out val)){
+                controller.processKeyPress(val);
             }
         }
         messages.Clear();

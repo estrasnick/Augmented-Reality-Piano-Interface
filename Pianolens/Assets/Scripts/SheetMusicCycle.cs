@@ -194,7 +194,7 @@ public class SheetMusicCycle : MonoBehaviour {
 
 
             //piano roll
-            float futureTick = Timing.CurrentMeasure + 2*Timing.BeatsPerMeasure;
+            float futureTick = Timing.CurrentMeasure + 2 * Timing.BeatsPerMeasure;
             while (pianoRollEvent < events.Count)
             {
                 SongEvent e = (SongEvent)events[pianoRollEvent];
@@ -248,7 +248,7 @@ public class SheetMusicCycle : MonoBehaviour {
             }
             else
             {
-                bar_prev1 = song.GetBars()[currentBar-1];
+                bar_prev1 = song.GetBars()[currentBar - 1];
             }
 
             bar = song.GetBars()[currentBar];
@@ -259,7 +259,7 @@ public class SheetMusicCycle : MonoBehaviour {
             }
             else
             {
-                bar_next1 = song.GetBars()[currentBar+1];
+                bar_next1 = song.GetBars()[currentBar + 1];
             }
 
             if (currentBar + 2 >= song.GetBars().Count)
@@ -268,7 +268,7 @@ public class SheetMusicCycle : MonoBehaviour {
             }
             else
             {
-                bar_next2 = song.GetBars()[currentBar+2];
+                bar_next2 = song.GetBars()[currentBar + 2];
             }
 
             RenderBar(bar, 0, false); // 0 is current bar
@@ -291,7 +291,7 @@ public class SheetMusicCycle : MonoBehaviour {
     {
         foreach (Note note in bar.GetNotes())
         {
-            Instantiate((isSmall ? getTransformForNoteRatio_small(note) : getTransformForNoteRatio(note)), 
+            Instantiate((isSmall ? getTransformForNoteRatio_small(note) : getTransformForNoteRatio(note)),
                 getNotePosition(note, whichBar), Quaternion.identity);
         }
     }
@@ -336,41 +336,54 @@ public class SheetMusicCycle : MonoBehaviour {
 
     Transform getTransformForNoteRatio(Note note)
     {
-            switch (note.GetNoteType())
-            {
-                case Note.Note_Types.quarter_note:
-                    return quarter_note;
-                case Note.Note_Types.half_note:
-                    return half_note;
-                case Note.Note_Types.eighth_note:
-                    return eighth_note;
-                case Note.Note_Types.whole_note:
-                    return whole_note;
-                case Note.Note_Types.sixteenth_note:
-                    return sixteenth_note;
-                case Note.Note_Types.dotted_quarter_note:
-                    return dotted_quarter_note;
-                case Note.Note_Types.dotted_half_note:
-                    return dotted_half_note;
-                case Note.Note_Types.dotted_eighth_note:
-                    return dotted_eighth_note;
-                case Note.Note_Types.dotted_whole_note:
-                    return dotted_whole_note;
-                case Note.Note_Types.dotted_sixteenth_note:
-                    return dotted_sixteenth_note;
-                case Note.Note_Types.quarter_rest:
-                    return quarter_rest;
-                case Note.Note_Types.half_rest:
-                    return half_rest;
-                case Note.Note_Types.eighth_rest:
-                    return eighth_rest;
-                case Note.Note_Types.whole_rest:
-                    return whole_rest;
-                default:
-                    Debug.Log("Unknown note type");
-                    return quarter_note;
-            }
+        switch (note.GetNoteType())
+        {
+            case Note.Note_Types.quarter_note:
+                return quarter_note;
+            case Note.Note_Types.half_note:
+                return half_note;
+            case Note.Note_Types.eighth_note:
+                return eighth_note;
+            case Note.Note_Types.whole_note:
+                return whole_note;
+            case Note.Note_Types.sixteenth_note:
+                return sixteenth_note;
+            case Note.Note_Types.dotted_quarter_note:
+                return dotted_quarter_note;
+            case Note.Note_Types.dotted_half_note:
+                return dotted_half_note;
+            case Note.Note_Types.dotted_eighth_note:
+                return dotted_eighth_note;
+            case Note.Note_Types.dotted_whole_note:
+                return dotted_whole_note;
+            case Note.Note_Types.dotted_sixteenth_note:
+                return dotted_sixteenth_note;
+            case Note.Note_Types.quarter_rest:
+                return quarter_rest;
+            case Note.Note_Types.half_rest:
+                return half_rest;
+            case Note.Note_Types.eighth_rest:
+                return eighth_rest;
+            case Note.Note_Types.whole_rest:
+                return whole_rest;
+            default:
+                Debug.Log("Unknown note type");
+                return quarter_note;
         }
+    }
+    
+    public void processKeyPress(int keyID)
+    {
+        if (activeNotes.Contains(keyID))
+        {
+            Timing.Unpause();
+            //yay!
+        }else
+        {
+            //nay!
+            Timing.Pause();
+        }
+    }
 
     Vector3 getNotePosition(Note note, int whichBar)
     {
