@@ -81,6 +81,14 @@ public class SheetMusicCycle : MonoBehaviour {
     HighlightEveryKey keyHighlighter;
     #endregion
 
+    #region midi-tolerance
+    const float BEATS_TO_TOLERATE = 0.3f;
+    ArrayList tolerance;
+    HashSet<int> activeNotes;
+    //represents key IDs that should be held down at the time with BEATS_TO_TOLERATE temporal tolerance.
+    int toleranceRunner;
+    #endregion
+
     // Use this for initialization
     void Start() {
         song = Song.GetCurrentSong();
@@ -160,7 +168,7 @@ public class SheetMusicCycle : MonoBehaviour {
             while (currentEvent < events.Count)
             {
                 SongEvent e = (SongEvent)events[currentEvent];
-                if (e.measureNumber <= ((float)Timing.GetCurrentBar() * Timing.BeatsPerMeasure + Timing.CurrentBeat))
+                if (e.measureNumber <=Timing.CurrentMeasure)
                 {
                     //process e.
                     keyHighlighter.SetKeyHighlight(e.isStart, e.keyID);
@@ -168,6 +176,21 @@ public class SheetMusicCycle : MonoBehaviour {
                 }
                 else { break; }
             }
+
+            //tolerance updating:
+            while (toleranceRunner < tolerance.Count)
+            {
+                SongEvent e = (SongEvent)tolerance[toleranceRunner];
+                if (e.measureNumber <= Timing.CurrentMeasure)
+                {
+                    //process e.
+                    if (e.isStart) activeNotes.Add(e.keyID);
+                    else activeNotes.Remove(e.keyID);
+                    toleranceRunner++;
+                }
+                else { break; }
+            }
+
 
             //piano roll
             float futureTick = Timing.CurrentMeasure + 2*Timing.BeatsPerMeasure;
@@ -207,6 +230,9 @@ public class SheetMusicCycle : MonoBehaviour {
             currentEvent = 0;
             pianoRollEvent = 0;
 
+            tolerance = SongAnalyzer.generateEventList(song, BEATS_TO_TOLERATE);
+            toleranceRunner = 0;
+            activeNotes = new HashSet<int>();
         }
         else
         {
@@ -216,6 +242,7 @@ public class SheetMusicCycle : MonoBehaviour {
             {
                 currentEvent = 0;
                 pianoRollEvent = 0;
+                toleranceRunner = 0;
                 bar_prev1 = new Bar(new List<Note>());
             }
             else
@@ -473,5 +500,6 @@ public class SheetMusicCycle : MonoBehaviour {
         bar_next1 = new Bar(new List<Note>());
         bar_next2 = new Bar(new List<Note>());
         currentEvent = 0;
+        toleranceRunner = 0;
     }
 }
