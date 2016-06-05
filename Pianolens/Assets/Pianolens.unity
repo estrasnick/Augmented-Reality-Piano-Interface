@@ -6610,13 +6610,13 @@ GameObject:
   - 33: {fileID: 1152281934}
   - 65: {fileID: 1152281933}
   - 23: {fileID: 1152281932}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ErrorIndicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1152281931
 Transform:
   m_ObjectHideFlags: 0
@@ -6637,9 +6637,9 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1152281930}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 0
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:

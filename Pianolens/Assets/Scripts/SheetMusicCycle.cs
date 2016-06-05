@@ -87,11 +87,14 @@ public class SheetMusicCycle : MonoBehaviour {
     HashSet<int> activeNotes;
     //represents key IDs that should be held down at the time with BEATS_TO_TOLERATE temporal tolerance.
     int toleranceRunner;
+    GameObject errorCube;
     #endregion
 
     // Use this for initialization
     void Start() {
         song = Song.GetCurrentSong();
+        errorCube = GameObject.Find("ErrorIndicator");
+        errorCube.SetActive(false);
         keyHighlighter = GameObject.FindObjectOfType<HighlightEveryKey>();
 
         ResetBars();
@@ -376,12 +379,12 @@ public class SheetMusicCycle : MonoBehaviour {
     {
         if (activeNotes.Contains(keyID))
         {
-            Timing.Unpause();
+            errorCube.SetActive(false);
             //yay!
         }else
         {
             //nay!
-            Timing.Pause();
+            errorCube.SetActive(true);
         }
     }
 
