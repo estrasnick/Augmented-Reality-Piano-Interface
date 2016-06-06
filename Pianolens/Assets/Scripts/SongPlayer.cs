@@ -1,19 +1,33 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public struct SongEvent
+public class SongEvent
 {
-    public bool isStart;
-    public int keyID;
-    public Note.Note_Types noteType;
-    public float measureNumber;
+    public bool IsStart;
+    public int KeyID;
+    public Note.Note_Types NoteType;
+    public float EndPoint;
+    public float StartPoint;
 
-    public SongEvent(bool isStart, int keyID, Note.Note_Types note_Types, float v3) : this()
+    bool hit = false;
+
+    public SongEvent(bool isStart, int keyID, Note.Note_Types note_Types, float v3)
     {
-        this.isStart = isStart;
-        this.keyID = keyID;
-        this.noteType = note_Types;
-        this.measureNumber = v3;
+        IsStart = isStart;
+        KeyID = keyID;
+        NoteType = note_Types;
+        EndPoint = v3;
+        StartPoint = EndPoint - Note.GetDuration(note_Types);
+    }
+
+    public void SetHit()
+    {
+        hit = true;
+    }
+
+    public bool IsHit()
+    {
+        return hit;
     }
 }
 
@@ -26,10 +40,10 @@ public static class SongAnalyzer
             SongEvent c1 = (SongEvent)a;
             SongEvent c2 = (SongEvent)b;
 
-            if (c1.measureNumber > c2.measureNumber)
+            if (c1.EndPoint > c2.EndPoint)
                 return 1;
 
-            if (c1.measureNumber < c2.measureNumber)
+            if (c1.EndPoint < c2.EndPoint)
                 return -1;
 
             else
@@ -55,7 +69,7 @@ public static class SongAnalyzer
             foreach(Note n in b.GetNotes())
             {
                 //TODO: add actual measure calculation here.
-                l.Add(new SongEvent(true, n.GetPianoKey(), n.GetNoteType(), barNum * Timing.BeatsPerMeasure + n.GetStartingBeat() - tolerance));
+                //l.Add(new SongEvent(true, n.GetPianoKey(), n.GetNoteType(), barNum * Timing.BeatsPerMeasure + n.GetStartingBeat() - tolerance));
                 l.Add(new SongEvent(false, n.GetPianoKey(), n.GetNoteType(), barNum * Timing.BeatsPerMeasure + n.GetStartingBeat()+n.GetDuration() + tolerance));
             }
             barNum++;

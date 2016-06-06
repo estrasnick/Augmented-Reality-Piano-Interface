@@ -104,12 +104,12 @@ public class HighlightEveryKey : MonoBehaviour {
     public void AddPianoRollItem(SongEvent e, float futureTick)
     {
 
-        Vector3[] keyWidth = PianoDescriptor.getPianoDescriptor().getKeyWidth(e.keyID, false);
+        Vector3[] keyWidth = PianoDescriptor.getPianoDescriptor().getKeyWidth(e.KeyID, false);
         float girth = (keyWidth[0] - keyWidth[1]).magnitude;
-        float duration = Note.GetDuration(e.noteType);
+        float duration = Note.GetDuration(e.NoteType);
         float length = PIXELPERBEAT * duration;
 
-        float center = e.measureNumber - Timing.CurrentMeasure - (duration / 2f);
+        float center = e.EndPoint - Timing.CurrentMeasure - (duration / 2f);
         float z_depth = center * PIXELPERBEAT;
 
         Vector3 midpoint = ((keyWidth[0] + keyWidth[1]) / 2f);
@@ -118,13 +118,14 @@ public class HighlightEveryKey : MonoBehaviour {
 
         GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
         cube.GetComponent<MeshRenderer>().sharedMaterial = highlightMatRef;
-        cube.name = "rolling" + e.keyID.ToString().PadLeft('0');
+        cube.name = "rolling" + e.KeyID.ToString().PadLeft('0');
         cube.tag = "PianoRoll";
 
         PianoRoll r = cube.AddComponent<PianoRoll>();
         r.e = e;
-        r.endPoint = e.measureNumber;
+        r.endPoint = e.EndPoint;
         r.duration = duration;
+        r.startPoint = e.StartPoint;
 
         cube.transform.parent = pianoRollContainer.transform;
         cube.transform.localPosition = new Vector3(x_center, y_center, z_depth);

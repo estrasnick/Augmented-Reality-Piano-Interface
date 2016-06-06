@@ -11,6 +11,8 @@ public class SheetMusicCycle : MonoBehaviour {
     static float BETWEEN_STAFF_LINE_DISTANCE_small = .00625f;
     static float LINE_OFFSET_small = .00625f;
 
+    const float TOLERANCE = .5f;
+
     Song song;
 
     #region notes
@@ -83,18 +85,18 @@ public class SheetMusicCycle : MonoBehaviour {
 
     #region midi-tolerance
     const float BEATS_TO_TOLERATE = 0.3f;
-    ArrayList tolerance;
-    HashSet<int> activeNotes;
+    //ArrayList tolerance;
+    //HashSet<int> activeNotes;
     //represents key IDs that should be held down at the time with BEATS_TO_TOLERATE temporal tolerance.
-    int toleranceRunner;
+    //int toleranceRunner;
     GameObject errorCube;
     #endregion
 
     // Use this for initialization
     void Start() {
         song = Song.GetCurrentSong();
-        errorCube = GameObject.Find("ErrorIndicator");
-        errorCube.SetActive(false);
+ /*       errorCube = GameObject.Find("ErrorIndicator");
+        errorCube.SetActive(false);*/
         keyHighlighter = GameObject.FindObjectOfType<HighlightEveryKey>();
 
         ResetBars();
@@ -182,18 +184,18 @@ public class SheetMusicCycle : MonoBehaviour {
             }*/
 
             //tolerance updating:
-            while (toleranceRunner < tolerance.Count)
+            /*while (toleranceRunner < tolerance.Count)
             {
                 SongEvent e = (SongEvent)tolerance[toleranceRunner];
-                if (e.measureNumber <= Timing.CurrentMeasure)
+                if (e.MeasureNumber <= Timing.CurrentMeasure)
                 {
                     //process e.
-                    if (e.isStart) activeNotes.Add(e.keyID);
-                    else activeNotes.Remove(e.keyID);
+                    if (e.IsStart) activeNotes.Add(e.KeyID);
+                    else activeNotes.Remove(e.KeyID);
                     toleranceRunner++;
                 }
                 else { break; }
-            }
+            }*/
 
 
             //piano roll
@@ -201,7 +203,7 @@ public class SheetMusicCycle : MonoBehaviour {
             while (pianoRollEvent < events.Count)
             {
                 SongEvent e = (SongEvent)events[pianoRollEvent];
-                if (e.measureNumber <= futureTick)
+                if (e.EndPoint <= futureTick)
                 {
                     //process e.
                     startDroplet(e, futureTick);
@@ -219,8 +221,8 @@ public class SheetMusicCycle : MonoBehaviour {
 
     private void startDroplet(SongEvent e, float currentMeasure)
     {
-        if (e.isStart) return;
-        if (e.keyID == 0) return;
+        if (e.IsStart) return;
+        if (e.KeyID == 0) return;
         keyHighlighter.AddPianoRollItem(e, currentMeasure);
     }
 
@@ -233,10 +235,10 @@ public class SheetMusicCycle : MonoBehaviour {
             events = SongAnalyzer.generateEventList(song);
             currentEvent = 0;
             pianoRollEvent = 0;
-
+            /*
             tolerance = SongAnalyzer.generateEventList(song, BEATS_TO_TOLERATE);
             toleranceRunner = 0;
-            activeNotes = new HashSet<int>();
+            activeNotes = new HashSet<int>();*/
         }
         else
         {
@@ -246,7 +248,7 @@ public class SheetMusicCycle : MonoBehaviour {
             {
                 currentEvent = 0;
                 pianoRollEvent = 0;
-                toleranceRunner = 0;
+                //toleranceRunner = 0;
                 bar_prev1 = new Bar(new List<Note>());
             }
             else
@@ -375,17 +377,34 @@ public class SheetMusicCycle : MonoBehaviour {
         }
     }
     
-    public void processKeyPress(int keyID)
+    void ProcessKeyPress(int keyID)
     {
+        bool isCorrect = false;
+        foreach (SongEvent e in events)
+        {
+            if (e.KeyID == keyID && e.StartPoint < Timing.CurrentMeasure + TOLERANCE && e.StartPoint > Timing.CurrentMeasure - TOLERANCE)
+            {
+                Debug.Log("You did it right. " + e.EndPoint + ", key: " + e.KeyID);
+                isCorrect = true;
+                e.SetHit();
+                break;
+            }
+        }
+        if (!isCorrect)
+        {
+            Debug.Log("Nah gurr");
+            // ShowErrorBlock(keyID);
+        }
+        /*
         if (activeNotes.Contains(keyID))
         {
             errorCube.SetActive(false);
-            //yay!
+            Debug.Log("yay!");
         }else
         {
-            //nay!
             errorCube.SetActive(true);
-        }
+            Debug.Log("nay!");
+        }*/
     }
 
     Vector3 getNotePosition(Note note, int whichBar)
@@ -517,6 +536,6 @@ public class SheetMusicCycle : MonoBehaviour {
         bar_next1 = new Bar(new List<Note>());
         bar_next2 = new Bar(new List<Note>());
         currentEvent = 0;
-        toleranceRunner = 0;
+        //toleranceRunner = 0;
     }
 }
