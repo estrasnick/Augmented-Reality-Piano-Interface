@@ -26,6 +26,7 @@ public class PianoRoll : MonoBehaviour {
         
         if(remaining < 0)
         {
+            e.ClearHit();
             Object.Destroy(gameObject);
             return;
         }

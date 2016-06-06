@@ -25,6 +25,11 @@ public class SongEvent
         hit = true;
     }
 
+    public void ClearHit()
+    {
+        hit = false;
+    }
+
     public bool IsHit()
     {
         return hit;
