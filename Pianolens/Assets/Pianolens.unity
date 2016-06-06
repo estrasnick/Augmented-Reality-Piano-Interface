@@ -6142,7 +6142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aa83d375fb75d6488991eaa40bc4c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highlightMatRef: {fileID: 2100000, guid: db85ebc074b9dc44f8db621b8bc7a88b, type: 2}
+  highlightMatRef: {fileID: 2100000, guid: 9144f46c662d27045951ff39b693b7a1, type: 2}
   stage: {fileID: 0}
   pianoRollContainer: {fileID: 0}
 --- !u!1 &1073242846
