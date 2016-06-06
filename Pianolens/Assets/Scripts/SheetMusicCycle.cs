@@ -421,8 +421,8 @@ public class SheetMusicCycle : MonoBehaviour {
         float z = StaffLine5[whichBar].transform.position.z;
 
         float y = 0;
-        float betweenLineDistance = (CurrentBar != 0) ? BETWEEN_STAFF_LINE_DISTANCE_small : BETWEEN_STAFF_LINE_DISTANCE;
-        float lineOffset = (CurrentBar != 0) ? LINE_OFFSET_small : LINE_OFFSET;
+        float betweenLineDistance = (whichBar != 0) ? BETWEEN_STAFF_LINE_DISTANCE_small : BETWEEN_STAFF_LINE_DISTANCE;
+        float lineOffset = (whichBar != 0) ? LINE_OFFSET_small : LINE_OFFSET;
 
         try
         {
@@ -441,25 +441,25 @@ public class SheetMusicCycle : MonoBehaviour {
                     y = StaffLine10[whichBar].transform.position.y;
                     break;
                 case Note.A_1:
-                    y = StaffLine10[whichBar].transform.position.y + betweenLineDistance;
+                    y = .5f * (StaffLine10[whichBar].transform.position.y + StaffLine9[whichBar].transform.position.y);
                     break;
                 case Note.B_1:
                     y = StaffLine9[whichBar].transform.position.y;
                     break;
                 case Note.C_2:
-                    y = StaffLine9[whichBar].transform.position.y + betweenLineDistance;
+                    y = .5f * (StaffLine9[whichBar].transform.position.y + StaffLine8[whichBar].transform.position.y);
                     break;
                 case Note.D_2:
                     y = StaffLine8[whichBar].transform.position.y;
                     break;
                 case Note.E_2:
-                    y = StaffLine8[whichBar].transform.position.y + betweenLineDistance;
+                    y = .5f * (StaffLine8[whichBar].transform.position.y + StaffLine7[whichBar].transform.position.y);
                     break;
                 case Note.F_2:
                     y = StaffLine7[whichBar].transform.position.y;
                     break;
                 case Note.G_2:
-                    y = StaffLine7[whichBar].transform.position.y + betweenLineDistance;
+                    y = .5f * (StaffLine7[whichBar].transform.position.y + StaffLine6[whichBar].transform.position.y);
                     break;
                 case Note.A_2:
                     y = StaffLine6[whichBar].transform.position.y;
@@ -480,25 +480,25 @@ public class SheetMusicCycle : MonoBehaviour {
                     y = StaffLine5[whichBar].transform.position.y;
                     break;
                 case Note.F_3:
-                    y = StaffLine5[whichBar].transform.position.y + betweenLineDistance;
+                    y = .5f * (StaffLine5[whichBar].transform.position.y + StaffLine4[whichBar].transform.position.y);
                     break;
                 case Note.G_3:
                     y = StaffLine4[whichBar].transform.position.y;
                     break;
                 case Note.A_3:
-                    y = StaffLine4[whichBar].transform.position.y + betweenLineDistance;
+                    y = .5f * (StaffLine4[whichBar].transform.position.y + StaffLine3[whichBar].transform.position.y);
                     break;
                 case Note.B_3:
                     y = StaffLine3[whichBar].transform.position.y;
                     break;
                 case Note.C_4:
-                    y = StaffLine3[whichBar].transform.position.y + betweenLineDistance;
+                    y = .5f * (StaffLine3[whichBar].transform.position.y + StaffLine2[whichBar].transform.position.y);
                     break;
                 case Note.D_4:
                     y = StaffLine2[whichBar].transform.position.y;
                     break;
                 case Note.E_4:
-                    y = StaffLine2[whichBar].transform.position.y + betweenLineDistance;
+                    y = .5f * (StaffLine2[whichBar].transform.position.y + StaffLine1[whichBar].transform.position.y);
                     break;
                 case Note.F_4:
                     y = StaffLine1[whichBar].transform.position.y;
