@@ -28,11 +28,12 @@ public class WorldCursor : MonoBehaviour {
 
         RaycastHit hitInfo;
 
-        if (Physics.Raycast(headPosition, gazeDirection, out hitInfo, Mathf.Infinity, layerMask))
+        if (Physics.Raycast(headPosition, gazeDirection, out hitInfo, Mathf.Infinity, layerMask) && hitInfo.collider.gameObject.name != "PianoRollContainer")
         {
             // If the raycast hit a hologram...
             // Display the cursor mesh.
             meshRenderer.enabled = true;
+            
 
             // Move theCursor to the point where the raycase hit. 
             this.transform.position = hitInfo.point;
