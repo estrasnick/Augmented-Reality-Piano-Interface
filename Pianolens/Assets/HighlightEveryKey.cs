@@ -11,7 +11,8 @@ public class HighlightEveryKey : MonoBehaviour {
     private Vector3 start;
     private Vector3 end;
 
-    public Material highlightMatRef;
+    public Material PianoRollMatRef;
+    public Material KeyHighlightMatRef;
     public GameObject stage;
     public GameObject pianoRollContainer;
 
@@ -87,7 +88,7 @@ public class HighlightEveryKey : MonoBehaviour {
         {
             Vector3[] pos = p.getKeyWidth(keyIndex, false);
             GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            cube.GetComponent<MeshRenderer>().sharedMaterial = highlightMatRef;
+            cube.GetComponent<MeshRenderer>().sharedMaterial = KeyHighlightMatRef;
             //print(pos[0]);
             //print(pos[1]);
             cube.name = "highlighting" + keyIndex.ToString().PadLeft('0');
@@ -117,7 +118,7 @@ public class HighlightEveryKey : MonoBehaviour {
         float y_center = midpoint.y;
 
         GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        cube.GetComponent<MeshRenderer>().sharedMaterial = highlightMatRef;
+        cube.GetComponent<MeshRenderer>().sharedMaterial = PianoRollMatRef;
         cube.name = "rolling" + e.KeyID.ToString().PadLeft('0');
         cube.tag = "PianoRoll";
 

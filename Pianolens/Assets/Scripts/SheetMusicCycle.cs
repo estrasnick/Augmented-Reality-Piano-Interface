@@ -11,10 +11,13 @@ public class SheetMusicCycle : MonoBehaviour {
     static float BETWEEN_STAFF_LINE_DISTANCE_small = .00625f;
     static float LINE_OFFSET_small = .00625f;
 
+    static float ERROR_KEY_DURATION = 1;
+
     const float TOLERANCE = .5f;
 
     Song song;
     GameObject playhead;
+    Dictionary<int, float> ErrorKeys;
 
     #region notes
     public Transform quarter_note;
@@ -96,7 +99,7 @@ public class SheetMusicCycle : MonoBehaviour {
     // Use this for initialization
     void Start() {
         song = Song.GetCurrentSong();
-
+        ErrorKeys = new Dictionary<int, float>();
         playhead = GameObject.Find("Playhead");
         /*       errorCube = GameObject.Find("ErrorIndicator");
                errorCube.SetActive(false);*/
@@ -215,6 +218,15 @@ public class SheetMusicCycle : MonoBehaviour {
                 else { break; }
             }
 
+            // clear error keys, if they have expired
+            foreach (var key in ErrorKeys)
+            {
+                if (key.Value < Timing.CurrentMeasure)
+                {
+                    keyHighlighter.SetKeyHighlight(false, key.Key);
+                    ErrorKeys.Remove(key.Key);
+                }
+            }
         }
 
         
@@ -393,8 +405,11 @@ public class SheetMusicCycle : MonoBehaviour {
                 break;
             }
         }
+        // if an incorrect press, show an error key
         if (!isCorrect)
         {
+            ErrorKeys.Add(keyID, Timing.CurrentMeasure + ERROR_KEY_DURATION);
+            keyHighlighter.SetKeyHighlight(true, keyID);
             Debug.Log("Nah gurr");
             // ShowErrorBlock(keyID);
         }
