@@ -88,15 +88,17 @@ public class GazeUI_Menu : MonoBehaviour
 
     void setSong1()
     {
-        sheetMusicText.text = "Ode to Joy";
-        Song.SetCurrentSong(InitializeSong.OdeToJoy);
+        Song songToSet = InitializeSong.OdeToJoy;
+        Song.SetCurrentSong(songToSet);
+        sheetMusicText.text = songToSet.GetTitle();
         closeSongChoiceMenu();
         mainMenu.SetActive(false);
     }
     void setSong2()
     {
-        sheetMusicText.text = "Clair de Lune";
-        Song.SetCurrentSong(InitializeSong.song);
+        Song songToSet = InitializeSong.MarysLamb;
+        Song.SetCurrentSong(songToSet);
+        sheetMusicText.text = songToSet.GetTitle();
         closeSongChoiceMenu();
         mainMenu.SetActive(false);
     }
