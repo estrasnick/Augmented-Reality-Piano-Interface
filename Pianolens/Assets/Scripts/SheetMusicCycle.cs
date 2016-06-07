@@ -265,6 +265,11 @@ public class SheetMusicCycle : MonoBehaviour {
                 pianoRollEvent = 0;
                 //toleranceRunner = 0;
                 bar_prev1 = new Bar(new List<Note>());
+                foreach (var key in ErrorKeys)
+                {
+                    keyHighlighter.SetKeyHighlight(false, key.Key);
+                    ErrorKeys.Remove(key.Key);
+                }
             }
             else
             {
