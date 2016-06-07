@@ -28,14 +28,14 @@ public class CalibrationCommands : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void OnSelectUp(){ moveABit(new Vector3(0, 1, 0));  }
-    void OnSelectDown() { moveABit(new Vector3(0, -1, 0)); }
-    void OnSelectLeft() { moveABit(new Vector3(-1, 0, 0)); }
-    void OnSelectRight() { moveABit(new Vector3(1, 0, 0)); }
-    void OnSelectForward() { moveABit(new Vector3(0, 0, 1)); }
-    void OnSelectBackward() { moveABit(new Vector3(0, 0, -1)); }
-    void OnSelectYawL() { rotateABit(new Vector3(0, 3, 0));  }
-    void OnSelectYawR() { rotateABit(new Vector3(0, -3, 0)); }
+    void OnSelectUp(){ moveABit(new Vector3(0, .5f, 0));  }
+    void OnSelectDown() { moveABit(new Vector3(0, -.5f, 0)); }
+    void OnSelectLeft() { moveABit(new Vector3(-.5f, 0, 0)); }
+    void OnSelectRight() { moveABit(new Vector3(.5f, 0, 0)); }
+    void OnSelectForward() { moveABit(new Vector3(0, 0, .5f)); }
+    void OnSelectBackward() { moveABit(new Vector3(0, 0, -.5f)); }
+    void OnSelectYawL() { rotateABit(new Vector3(0, 4, 0));  }
+    void OnSelectYawR() { rotateABit(new Vector3(0, -4, 0)); }
 
     void OnSelectZoomIn() { resizeABit(-1); }
 
