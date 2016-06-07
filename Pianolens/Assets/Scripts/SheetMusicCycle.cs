@@ -14,6 +14,7 @@ public class SheetMusicCycle : MonoBehaviour {
     const float TOLERANCE = .5f;
 
     Song song;
+    GameObject playhead;
 
     #region notes
     public Transform quarter_note;
@@ -95,8 +96,10 @@ public class SheetMusicCycle : MonoBehaviour {
     // Use this for initialization
     void Start() {
         song = Song.GetCurrentSong();
- /*       errorCube = GameObject.Find("ErrorIndicator");
-        errorCube.SetActive(false);*/
+
+        playhead = GameObject.Find("Playhead");
+        /*       errorCube = GameObject.Find("ErrorIndicator");
+               errorCube.SetActive(false);*/
         keyHighlighter = GameObject.FindObjectOfType<HighlightEveryKey>();
 
         ResetBars();
@@ -214,7 +217,7 @@ public class SheetMusicCycle : MonoBehaviour {
 
         }
 
-        GameObject playhead = GameObject.Find("Playhead");
+        
         Vector3 oldpos = playhead.transform.position;
         playhead.transform.position = new Vector3(GetPositionFromBeat(Timing.GetCurrentBeat(), 0), oldpos.y, oldpos.z);
     }
@@ -384,7 +387,7 @@ public class SheetMusicCycle : MonoBehaviour {
         {
             if (e.KeyID == keyID && e.StartPoint < Timing.CurrentMeasure + TOLERANCE && e.StartPoint > Timing.CurrentMeasure - TOLERANCE)
             {
-                Debug.Log("You did it right. " + e.EndPoint + ", key: " + e.KeyID);
+                //Debug.Log("You did it right. " + e.EndPoint + ", key: " + e.KeyID);
                 isCorrect = true;
                 e.SetHit();
                 break;

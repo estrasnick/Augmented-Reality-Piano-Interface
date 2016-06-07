@@ -71,7 +71,7 @@ public class Timing : MonoBehaviour {
                         }
                     }
 
-                    CurrentMeasure = (((float)CurrentBar) * (float)BeatsPerMeasure + CurrentBeat - 1);
+                    CurrentMeasure = (((float)CurrentBar) * (float)BeatsPerMeasure + CurrentBeat);
 
                 }
                 LastTime = currentTime;
@@ -93,7 +93,7 @@ public class Timing : MonoBehaviour {
         CurrentBar = 1;
         CurrentBeat = 1;
         // Xiaonan wants to do everything zero-indexed -_-
-        CurrentMeasure = (((float) (CurrentBar)) * Timing.BeatsPerMeasure + (Timing.CurrentBeat - 1));
+        CurrentMeasure = (((float) (CurrentBar)) * Timing.BeatsPerMeasure + (Timing.CurrentBeat));
 
         CurrentBPM = (float) Song.GetCurrentBPM();
         Debug.Log("Updating new song. Time signature: " + BeatsPerMeasure + "/" + BeatUnit + ", BPM: " + CurrentBPM);
