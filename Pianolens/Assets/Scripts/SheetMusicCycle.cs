@@ -162,14 +162,57 @@ public class SheetMusicCycle : MonoBehaviour {
         CurrentBar = 0;
     }
 
+    bool HasSongChanged()
+    {
+        int CurrentSongID = -1;
+        int LastSongID = -1;
+
+        Song CurrentSong = Song.GetCurrentSong();
+        if (CurrentSong != null)
+        {
+            CurrentSongID = CurrentSong.GetId();
+        }
+        if (song != null)
+        {
+            LastSongID = song.GetId();
+        }
+
+        return CurrentSongID != LastSongID;
+    }
+
     // Update is called once per frame
     void Update() {
-        CurrentBar = Timing.GetCurrentBar();
-        if (CurrentBar != LastBar)
+
+        if (HasSongChanged())
         {
-            NextBar(CurrentBar - 1);
+            // If the song has changed, #1 -- Get the new song and generate the pending roll key list. 
+            song = Song.GetCurrentSong();
+            events = SongAnalyzer.generateEventList(song);
+            currentEvent = 0;
+            pianoRollEvent = 0;
+
+            // #2 - clear error keys, regardless of expiration. Not sure why, but without this step, 
+            // keys can be redrawn as error keys after they are destroyed. 
+            foreach (var key in ErrorKeys)
+            {
+                keyHighlighter.SetKeyHighlight(false, key.Key);
+                ErrorKeys.Remove(key.Key);
+            }
+
+            // #3 - Destroy all piano roll keys, and prepare the first bar
+            keyHighlighter.DestroyAllPianoRollItems();
+            NextBar(0);
+            LastBar = 1;
         }
-        LastBar = CurrentBar;
+        else
+        {
+            CurrentBar = Timing.GetCurrentBar();
+            if (CurrentBar != LastBar)
+            {
+                NextBar(CurrentBar - 1);
+            }
+            LastBar = CurrentBar;
+        }
 
 
         //figure out what events happened in the last frame and handle it!
@@ -244,6 +287,7 @@ public class SheetMusicCycle : MonoBehaviour {
     void NextBar(int currentBar)
     {
         // Check if song is null, and continue checking until it is not
+
         if (song == null)
         {
             song = Song.GetCurrentSong();

@@ -132,6 +132,16 @@ public class HighlightEveryKey : MonoBehaviour {
         cube.transform.localPosition = new Vector3(x_center, y_center, z_depth);
         cube.transform.localScale = new Vector3(girth, 0.01f, length);
     }
+
+    public void DestroyAllPianoRollItems()
+    {
+        GameObject[] pianoRollObjects = GameObject.FindGameObjectsWithTag("PianoRoll");
+
+        for (var i = 0; i < pianoRollObjects.Length; i++)
+        {
+            Destroy(pianoRollObjects[i]);
+        }
+    }
 }
 
 // Custom Editor the "old" way by modifying the script variables directly.
