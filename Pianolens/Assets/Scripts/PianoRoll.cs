@@ -31,13 +31,16 @@ public class PianoRoll : MonoBehaviour {
             return;
         }
 
-        if (Timing.CurrentMeasure - startPoint > TOLERANCE)
+        if (Timing.MidiEnabled)
         {
-            if (!e.IsHit() && !markedWrong)
+            if (Timing.CurrentMeasure - startPoint > TOLERANCE)
             {
-                markedWrong = true;
-                gameObject.GetComponent<Renderer>().material = errorMat;
-                Debug.Log("Marking wrong: " + e.EndPoint + ", key: " + e.KeyID);
+                if (!e.IsHit() && !markedWrong)
+                {
+                    markedWrong = true;
+                    gameObject.GetComponent<Renderer>().material = errorMat;
+                    Debug.Log("Marking wrong: " + e.EndPoint + ", key: " + e.KeyID);
+                }
             }
         }
 

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d866145a2b9739d46b38c42558082b6b
-timeCreated: 1464760589
+timeCreated: 1465274216
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -17,7 +17,7 @@ TextureImporter:
     21300020: MenuItems 3
     21300022: MenuItems Speed
     21300024: MenuItems Fantastic
-    21300026: MenuItems 4
+    21300026: MenuItems Midi On
     21300028: MenuItems Real-Time
     21300030: MenuItems Speed 75
     21300032: MenuItems Quit
@@ -25,7 +25,7 @@ TextureImporter:
     21300036: MenuItems Speed 25
     21300038: MenuItems 5
     21300040: MenuItems 6
-    21300042: MenuItems 7
+    21300042: MenuItems Midi Off
     21300044: MenuItems 8
     21300046: MenuItems BACK
     21300048: MenuItems Options
@@ -285,7 +285,7 @@ TextureImporter:
         - {x: 140, y: -22}
         - {x: 140, y: 22}
       tessellationDetail: -1
-    - name: MenuItems 4
+    - name: MenuItems Midi On
       rect:
         serializedVersion: 2
         x: 146
@@ -352,7 +352,7 @@ TextureImporter:
     - name: MenuItems Speed 50
       rect:
         serializedVersion: 2
-        x: 146
+        x: 145
         y: 97
         width: 140
         height: 44
@@ -413,11 +413,11 @@ TextureImporter:
         - {x: 140, y: -22}
         - {x: 140, y: 22}
       tessellationDetail: -1
-    - name: MenuItems 7
+    - name: MenuItems Midi Off
       rect:
         serializedVersion: 2
         x: 146
-        y: 49
+        y: 50
         width: 140
         height: 44
       alignment: 4

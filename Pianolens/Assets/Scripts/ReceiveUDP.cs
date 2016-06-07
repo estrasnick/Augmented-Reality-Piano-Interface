@@ -42,6 +42,7 @@ public class ReceiveUDP : MonoBehaviour
     // use this for initialization
     void Start()
     {
+        messages = new List<String>();
         Debug.Log("exit start");
 #endif
     }

@@ -28,6 +28,7 @@ public class GazeUI_Menu : MonoBehaviour
 
         currentMenuChoices.Add(1); //autoplay is on
         currentMenuChoices.Add(1); //calibrate is on
+        currentMenuChoices.Add(1); //midi is on
 
         activateMenu(Menus);
 

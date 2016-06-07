@@ -19,6 +19,7 @@ public class Timing : MonoBehaviour {
 
     public static bool IsPaused = true;
     public static bool LoopMode = true;
+    public static bool MidiEnabled = true;
 
     static float LastTime;
 
@@ -158,6 +159,16 @@ public class Timing : MonoBehaviour {
     void DisableLoopMode()
     {
         LoopMode = false;
+    }
+
+    void EnableMidi()
+    {
+        MidiEnabled = true;
+    }
+
+    void DisableMidi()
+    {
+        MidiEnabled = false;
     }
 
     void TogglePlayback()
