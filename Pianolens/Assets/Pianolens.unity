@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4505586, g: 0.5006319, b: 0.5758055, a: 1}
+  m_IndirectSpecularColor: {r: 0.45055848, g: 0.50063163, b: 0.5758049, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -6337,6 +6337,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PianoRollMatRef: {fileID: 2100000, guid: 9144f46c662d27045951ff39b693b7a1, type: 2}
   KeyHighlightMatRef: {fileID: 2100000, guid: 3dd91f027113a25408f8bae1e39eea86, type: 2}
+  KeyHighlightCorrectMatRef: {fileID: 2100000, guid: a5c469a3d9eeb2347bfc70cdb5ff68dd,
+    type: 2}
   stage: {fileID: 0}
   pianoRollContainer: {fileID: 0}
 --- !u!1 &1073242846

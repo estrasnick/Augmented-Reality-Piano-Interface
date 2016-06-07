@@ -6,6 +6,7 @@ public class PianoRoll : MonoBehaviour {
     const float TOLERANCE = .5f;
 
     Material errorMat;
+    Material correctMat;
 
     public SongEvent e;
     public float endPoint;
@@ -13,11 +14,13 @@ public class PianoRoll : MonoBehaviour {
     public float duration;
     public float startPoint;
 
-    bool markedWrong;
+    bool markedWrong = false;
+    bool markedRight = false;
 
 	// Use this for initialization
 	void Start () {
         errorMat = Resources.Load("Materials/Error") as Material;
+        correctMat = Resources.Load("Materials/KeyHighlightCorrectMaterial") as Material;
     }
 	
 	// Update is called once per frame
@@ -27,15 +30,25 @@ public class PianoRoll : MonoBehaviour {
         if(remaining < 0)
         {
             e.ClearHit();
+            markedRight = false;
+            markedWrong = false;
             Object.Destroy(gameObject);
             return;
         }
 
         if (Timing.MidiEnabled)
         {
+            if (!markedRight)
+            {
+                if (e.IsHit())
+                {
+                    markedRight = true;
+                    gameObject.GetComponent<Renderer>().material.color = new Color(236, 232, 66);
+                }
+            }
             if (Timing.CurrentMeasure - startPoint > TOLERANCE)
             {
-                if (!e.IsHit() && !markedWrong)
+                if (!e.IsHit() && !markedWrong && !markedRight)
                 {
                     markedWrong = true;
                     gameObject.GetComponent<Renderer>().material = errorMat;
