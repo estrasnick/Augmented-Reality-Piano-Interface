@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: ebf515194bb7f0341a555c2acc7a93a0
-timeCreated: 1465062917
+timeCreated: 1465272493
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -22,7 +22,7 @@ TextureImporter:
     21300030: Tooltip - Pick Up Weapon
     21300032: Tooltip - Activate Door
     21300034: Tooltip - Char Control
-    21300036: Tooltip - Keypad Example
+    21300036: Tooltip - Restart
     21300038: Tooltip - What's Possible
   serializedVersion: 2
   mipmaps:
@@ -429,25 +429,29 @@ TextureImporter:
         - {x: 129.08807, y: -31.295334}
         - {x: 129.08807, y: 43.704666}
       tessellationDetail: -1
-    - name: Tooltip - Keypad Example
+    - name: Tooltip - Restart
       rect:
         serializedVersion: 2
-        x: 606
-        y: 108
+        x: 605
+        y: 116
         width: 302
         height: 101
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -127.91193, y: 43.352333}
-        - {x: -127.91193, y: -30.647667}
-        - {x: -126.91193, y: -31.647667}
-        - {x: -69.91193, y: -42.647667}
-        - {x: -57.911926, y: -42.647667}
-        - {x: -48.911926, y: -37.647667}
-        - {x: 129.08807, y: -31.647667}
-        - {x: 129.08807, y: 43.352333}
+      - - {x: -127.75775, y: -38.88083}
+        - {x: -102.75775, y: -42.88083}
+        - {x: 38.24225, y: -42.88083}
+        - {x: 129.24225, y: -38.88083}
+        - {x: 129.24225, y: 38.11917}
+        - {x: -127.75775, y: 38.11917}
+      - - {x: -65.75775, y: 43.11917}
+        - {x: -65.75775, y: 42.11917}
+        - {x: -62.75775, y: 39.11917}
+        - {x: -60.75775, y: 39.11917}
+        - {x: -57.75775, y: 42.11917}
+        - {x: -57.75775, y: 43.11917}
       tessellationDetail: -1
     - name: Tooltip - What's Possible
       rect:
