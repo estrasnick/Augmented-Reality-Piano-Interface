@@ -88,6 +88,7 @@ public class GazeUI_Menu : MonoBehaviour
 
     void setSong1()
     {
+        Timing.SetSongUpdatedFlag();
         Song songToSet = InitializeSong.OdeToJoy;
         Song.SetCurrentSong(songToSet);
         sheetMusicText.text = songToSet.GetTitle();
@@ -96,6 +97,7 @@ public class GazeUI_Menu : MonoBehaviour
     }
     void setSong2()
     {
+        Timing.SetSongUpdatedFlag();
         Song songToSet = InitializeSong.MarysLamb;
         Song.SetCurrentSong(songToSet);
         sheetMusicText.text = songToSet.GetTitle();

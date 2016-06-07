@@ -196,4 +196,9 @@ public class Timing : MonoBehaviour {
     {
         songUpdated = false;
     }
+
+    public static void SetSongUpdatedFlag()
+    {
+        songUpdated = true;
+    }
 }
