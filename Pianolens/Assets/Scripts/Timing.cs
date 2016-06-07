@@ -17,7 +17,7 @@ public class Timing : MonoBehaviour {
     public static float CurrentBPM; // The current BPM of the song.
     public static float CurrentMeasure;
 
-    public static bool IsPaused = false;
+    public static bool IsPaused = true;
     public static bool LoopMode = true;
 
     static float LastTime;
