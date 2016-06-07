@@ -9,7 +9,7 @@ public class FOVTarget : MonoBehaviour
     public MeshRenderer leftMeshRenderer;
     public MeshRenderer rightMeshRenderer;
     private const string LAYER_NAME = "Keys";
-    private const float FOV_THRESHOLD = 0.1f;
+    private const float FOV_THRESHOLD = 0.05f;
     int layerMask;
 
     void Start()
@@ -37,8 +37,12 @@ public class FOVTarget : MonoBehaviour
             SortedList litKeys = new SortedList();
             foreach (GameObject litKey in GameObject.FindGameObjectsWithTag("HighlightedKey"))
             {
-                litKeys.Add(litKey.name, litKey);
+                if (!litKeys.ContainsKey(litKey.name))
+                {
+                    litKeys.Add(litKey.name, litKey);
+                }
             }
+            
             // Don't have to do anything if there are no lit keys.
             int numLitKeys = litKeys.Count;
             if (numLitKeys < 1)
