@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class BPMCommand : MonoBehaviour
 {
     Text text;
-    public static int speed = -1;
+    public static float speed = 1.0f;
 
     // Use this for initialization
     void Start()
@@ -17,37 +17,47 @@ public class BPMCommand : MonoBehaviour
         }
         else
         {
-            text.text = speed.ToString();
+            DisplaySpeed();
         }
     }
 
     void Update()
     {
-        if (Timing.GetCurrentBPM() != speed)
+        if (Timing.GetCurrentBPM() != Mathf.CeilToInt(Song.GetCurrentSong().GetDefaultBPM() * speed))
         {
-            speed = Timing.GetCurrentBPM();
-            text.text = speed.ToString();
+            int updatedBPM = Mathf.CeilToInt(Song.GetCurrentSong().GetDefaultBPM() * speed);
+            Timing.SetBPM(updatedBPM);
+            DisplaySpeed();
         }
+    }
+
+    void DisplaySpeed()
+    {
+        float defaultSpeed = Song.GetCurrentSong().GetDefaultBPM();
+        float relativeSpeed = speed / defaultSpeed;
+        text.text = "BPM: " + Timing.CurrentBPM + "\n" + "Speed: " + Mathf.CeilToInt(speed * 100).ToString() + "%";
     }
 
     // Called by GazeGestureManager when the user performs a Select gesture
     void OnSelectUp()
     {
-        if (speed > 0)
+        if (speed < 1.0)
         {
-            speed += 1;
-            Timing.SetBPM(speed);
-            text.text = speed.ToString();
+            speed += 0.25f;
+            int updatedBPM = Mathf.CeilToInt(Song.GetCurrentSong().GetDefaultBPM() * speed);
+            Timing.SetBPM(updatedBPM);
+            DisplaySpeed();
         }
     }
 
     void OnSelectDown()
     {
-        if (speed > 0)
+        if (speed > 0.25)
         {
-            speed -= 1;
-            Timing.SetBPM(speed);
-            text.text = speed.ToString();
+            speed -= 0.25f;
+            int updatedBPM = Mathf.CeilToInt(Song.GetCurrentSong().GetDefaultBPM() * speed);
+            Timing.SetBPM(updatedBPM);
+            DisplaySpeed();
         }
     }
 

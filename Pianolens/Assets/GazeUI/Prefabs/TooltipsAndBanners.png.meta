@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: ebf515194bb7f0341a555c2acc7a93a0
-timeCreated: 1465272493
+timeCreated: 1465330008
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -9,8 +9,8 @@ TextureImporter:
     21300004: Banners - How It Works
     21300006: Banners - Other Cool Stuff
     21300008: Banners - One Time Use
-    21300010: Tooltip - Speed Down
-    21300012: Tooltip - About Turret
+    21300010: Tooltip - Calibrator
+    21300012: Tooltip - Speed Down
     21300014: Tooltip - Flip Switch
     21300016: Tooltip - Horiz Timer
     21300018: Tooltip - Features
@@ -20,8 +20,8 @@ TextureImporter:
     21300026: Tooltip - PlayStop
     21300028: Tooltip - Menu Sample
     21300030: Tooltip - Pick Up Weapon
-    21300032: Tooltip - Activate Door
-    21300034: Tooltip - Char Control
+    21300032: Tooltip - Slower
+    21300034: Tooltip - Faster
     21300036: Tooltip - Restart
     21300038: Tooltip - What's Possible
   serializedVersion: 2
@@ -173,45 +173,45 @@ TextureImporter:
         - {x: 170, y: -26.78238}
         - {x: 171, y: -25.78238}
       tessellationDetail: -1
-    - name: Tooltip - Speed Down
+    - name: Tooltip - Calibrator
       rect:
         serializedVersion: 2
-        x: 1
-        y: 325
+        x: 0
+        y: 324
         width: 301
         height: 101
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 126.845856, y: 43.402863}
-        - {x: -127.154144, y: 43.402863}
-        - {x: -127.154144, y: -33.597137}
-        - {x: -74.154144, y: -42.597137}
-        - {x: -58.154144, y: -42.597137}
-        - {x: -48.154144, y: -36.597137}
-        - {x: 128.84586, y: -33.597137}
-        - {x: 128.84586, y: 41.402863}
+      - - {x: 126.5, y: 43.057007}
+        - {x: -127.5, y: 43.057007}
+        - {x: -127.5, y: -33.942993}
+        - {x: -74.5, y: -42.942993}
+        - {x: -59.5, y: -42.942993}
+        - {x: -50.5, y: -33.942993}
+        - {x: 127.5, y: -33.942993}
+        - {x: 127.5, y: 42.057007}
       tessellationDetail: -1
-    - name: Tooltip - About Turret
+    - name: Tooltip - Speed Down
       rect:
         serializedVersion: 2
-        x: 910
-        y: 322
+        x: 907
+        y: 326
         width: 300
         height: 101
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -126.77203, y: 43.365295}
-        - {x: -126.77203, y: -30.634705}
-        - {x: -125.77203, y: -31.634705}
-        - {x: -68.77203, y: -42.634705}
-        - {x: -58.772034, y: -42.634705}
-        - {x: -47.772034, y: -31.634705}
-        - {x: 128.22797, y: -31.634705}
-        - {x: 128.22797, y: 43.365295}
+      - - {x: -126.80957, y: 42.24872}
+        - {x: -126.80957, y: -34.75128}
+        - {x: -73.80957, y: -34.75128}
+        - {x: -65.80957, y: -42.75128}
+        - {x: -53.80957, y: -42.75128}
+        - {x: -45.80957, y: -34.75128}
+        - {x: 127.19043, y: -34.75128}
+        - {x: 127.19043, y: 42.24872}
       tessellationDetail: -1
     - name: Tooltip - Flip Switch
       rect:
@@ -315,21 +315,21 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 302
-        y: 319
+        y: 316
         width: 302
         height: 101
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -127.5518, y: 44.32773}
-        - {x: -127.5518, y: -26.672272}
-        - {x: -125.5518, y: -28.672272}
-        - {x: -81.5518, y: -40.67227}
-        - {x: -59.551804, y: -40.67227}
-        - {x: -46.551804, y: -31.672272}
-        - {x: 128.4482, y: -28.672272}
-        - {x: 128.4482, y: 44.32773}
+      - - {x: -127.5518, y: 43.29016}
+        - {x: -127.5518, y: -26.709839}
+        - {x: -77.5518, y: -29.709839}
+        - {x: -70.5518, y: -38.70984}
+        - {x: -59.551804, y: -38.70984}
+        - {x: -46.551804, y: -29.709839}
+        - {x: 128.4482, y: -26.709839}
+        - {x: 128.4482, y: 43.29016}
       tessellationDetail: -1
     - name: Tooltip - PlayStop
       rect:
@@ -391,43 +391,47 @@ TextureImporter:
         - {x: 128.29404, y: -32.5}
         - {x: 128.29404, y: 42.5}
       tessellationDetail: -1
-    - name: Tooltip - Activate Door
+    - name: Tooltip - Slower
       rect:
         serializedVersion: 2
         x: 607
-        y: 322
+        y: 325
         width: 301
         height: 101
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 128.43396, y: 43.365295}
-        - {x: -127.56604, y: 43.365295}
-        - {x: -127.56604, y: -31.634705}
-        - {x: -70.56604, y: -42.634705}
-        - {x: -59.56604, y: -42.634705}
-        - {x: -52.56604, y: -35.634705}
-        - {x: 127.43396, y: -31.634705}
-        - {x: 128.43396, y: -30.634705}
+      - - {x: 128.43396, y: 42.402863}
+        - {x: 127.43396, y: 43.402863}
+        - {x: -127.56604, y: 43.402863}
+        - {x: -127.56604, y: -33.597137}
+        - {x: -83.56604, y: -42.597137}
+        - {x: -53.56604, y: -42.597137}
+        - {x: -49.56604, y: -33.597137}
+        - {x: 127.43396, y: -33.597137}
+        - {x: 128.43396, y: -32.597137}
       tessellationDetail: -1
-    - name: Tooltip - Char Control
+    - name: Tooltip - Faster
       rect:
         serializedVersion: 2
         x: 606
-        y: 216
+        y: 217
         width: 302
         height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -127.91193, y: 43.704666}
-        - {x: -127.91193, y: -32.295334}
-        - {x: -87.91193, y: -42.295334}
-        - {x: 20.088074, y: -42.295334}
-        - {x: 129.08807, y: -31.295334}
-        - {x: 129.08807, y: 43.704666}
+      - - {x: 128.08807, y: 43.55052}
+        - {x: -126.91193, y: 43.55052}
+        - {x: -127.91193, y: 42.55052}
+        - {x: -127.91193, y: -32.44948}
+        - {x: -82.91193, y: -42.44948}
+        - {x: 10.088074, y: -42.44948}
+        - {x: 128.08807, y: -32.44948}
+        - {x: 129.08807, y: -31.449478}
+        - {x: 129.08807, y: 42.55052}
       tessellationDetail: -1
     - name: Tooltip - Restart
       rect:
