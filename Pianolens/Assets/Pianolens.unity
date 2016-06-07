@@ -5081,9 +5081,9 @@ MonoBehaviour:
   ReplacementSprite: {fileID: 0}
   oneTimeUse: 0
   resetOnActivate: 0
-  timeToActivate: 0.75
-  timeToDeactivate: 0.75
-  waitTime: 0.5
+  timeToActivate: 1
+  timeToDeactivate: 1
+  waitTime: 1
   CallFunctionOnActivate: closeOptionsMenu
   GameObjectToActivate: {fileID: 1651839407}
   CallFunctionOnDeactivate: 
@@ -6075,7 +6075,7 @@ MonoBehaviour:
   oneTimeUse: 0
   resetOnActivate: 1
   timeToActivate: 1
-  timeToDeactivate: 2
+  timeToDeactivate: 1
   waitTime: 1
   CallFunctionOnActivate: ResetSong
   GameObjectToActivate: {fileID: 1127973337}
@@ -8443,6 +8443,161 @@ Prefab:
       propertyPath: GameObjectToActivate
       value: 
       objectReference: {fileID: 1127973337}
+    - target: {fileID: 114000013709901216, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: timeToDeactivate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011367841214, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: timeToActivate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011367841214, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: timeToDeactivate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011367841214, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: waitTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010873992104, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: timeToActivate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010873992104, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: timeToDeactivate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010873992104, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: waitTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010824613924, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: timeToActivate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010824613924, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: timeToDeactivate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010824613924, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: waitTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011236730516, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: timeToActivate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011236730516, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: timeToDeactivate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011236730516, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: waitTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013655066976, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: timeToActivate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013655066976, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: timeToDeactivate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013655066976, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: waitTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011632732238, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: timeToActivate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011632732238, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: timeToDeactivate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011632732238, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: waitTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011139075524, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: timeToActivate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011139075524, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: timeToDeactivate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011139075524, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: waitTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012948136066, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: timeToActivate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012948136066, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: timeToDeactivate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012948136066, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: waitTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011230064982, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: timeToActivate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011230064982, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: timeToDeactivate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011230064982, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: waitTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013226243532, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: timeToActivate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013226243532, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: timeToDeactivate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013226243532, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672,
+        type: 2}
+      propertyPath: waitTime
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 831fa3d6b5c4b4b4f8f6dc26f44cc672, type: 2}
   m_IsPrefabParent: 0
@@ -11341,7 +11496,7 @@ MonoBehaviour:
   oneTimeUse: 0
   resetOnActivate: 0
   timeToActivate: 1
-  timeToDeactivate: 2
+  timeToDeactivate: 1
   waitTime: 1
   CallFunctionOnActivate: TogglePlayback
   GameObjectToActivate: {fileID: 1127973337}
