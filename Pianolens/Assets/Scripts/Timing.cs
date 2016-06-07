@@ -21,6 +21,8 @@ public class Timing : MonoBehaviour {
     public static bool LoopMode = true;
     public static bool MidiEnabled = true;
 
+    public static bool songUpdated = true;
+
     static float LastTime;
 
     // Use this for initialization
@@ -85,6 +87,8 @@ public class Timing : MonoBehaviour {
     // Called when a new song is selected, updating timing information
     static void UpdateNewSong()
     {
+
+        songUpdated = true;
         LastTime = Time.time;
         SongId = Song.GetId();
 
@@ -186,5 +190,10 @@ public class Timing : MonoBehaviour {
     public static int GetCurrentBPM()
     {
         return (int) CurrentBPM;
+    }
+
+    public static void ClearSongUpdatedFlag()
+    {
+        songUpdated = false;
     }
 }

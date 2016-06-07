@@ -164,20 +164,7 @@ public class SheetMusicCycle : MonoBehaviour {
 
     bool HasSongChanged()
     {
-        int CurrentSongID = -1;
-        int LastSongID = -1;
-
-        Song CurrentSong = Song.GetCurrentSong();
-        if (CurrentSong != null)
-        {
-            CurrentSongID = CurrentSong.GetId();
-        }
-        if (song != null)
-        {
-            LastSongID = song.GetId();
-        }
-
-        return CurrentSongID != LastSongID;
+        return Timing.songUpdated;
     }
 
     // Update is called once per frame
@@ -185,6 +172,7 @@ public class SheetMusicCycle : MonoBehaviour {
 
         if (HasSongChanged())
         {
+            Timing.ClearSongUpdatedFlag();
             // If the song has changed, #1 -- Get the new song and generate the pending roll key list. 
             song = Song.GetCurrentSong();
             events = SongAnalyzer.generateEventList(song);
@@ -604,5 +592,15 @@ public class SheetMusicCycle : MonoBehaviour {
         bar_next2 = new Bar(new List<Note>());
         currentEvent = 0;
         //toleranceRunner = 0;
+    }
+
+    public void ClearHighlights()
+    {
+        foreach (var key in ErrorKeys)
+        {
+            keyHighlighter.SetKeyHighlight(false, key.Key);
+            ErrorKeys.Remove(key.Key);
+        }
+        keyHighlighter.DestroyAllPianoRollItems();
     }
 }
