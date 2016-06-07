@@ -41,7 +41,7 @@ public class BPMCommand : MonoBehaviour
     // Called by GazeGestureManager when the user performs a Select gesture
     void OnSelectUp()
     {
-        if (speed < 1.0)
+        if (speed < 2.0f)
         {
             speed += 0.25f;
             int updatedBPM = Mathf.CeilToInt(Song.GetCurrentSong().GetDefaultBPM() * speed);
