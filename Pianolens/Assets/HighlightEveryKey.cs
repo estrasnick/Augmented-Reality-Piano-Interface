@@ -106,7 +106,7 @@ public class HighlightEveryKey : MonoBehaviour {
     {
 
         Vector3[] keyWidth = PianoDescriptor.getPianoDescriptor().getKeyWidth(e.KeyID, false);
-        float girth = (keyWidth[0] - keyWidth[1]).magnitude;
+        float girth = .5f * (keyWidth[0] - keyWidth[1]).magnitude;
         float duration = Note.GetDuration(e.NoteType);
         float length = PIXELPERBEAT * duration;
 
