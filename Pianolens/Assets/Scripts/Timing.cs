@@ -112,6 +112,12 @@ public class Timing : MonoBehaviour {
     }
 
     // Set the currently active bar, resetting the beat to 1.
+    public void ResetSong()
+    {
+        Timing.SetBar(1);
+    }
+
+    // Set the currently active bar, resetting the beat to 1.
     public static void SetBar(int bar)
     {
         CurrentBar = bar;
