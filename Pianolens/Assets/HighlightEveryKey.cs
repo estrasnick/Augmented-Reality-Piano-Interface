@@ -104,7 +104,6 @@ public class HighlightEveryKey : MonoBehaviour {
 
     public void AddPianoRollItem(SongEvent e, float futureTick)
     {
-
         Vector3[] keyWidth = PianoDescriptor.getPianoDescriptor().getKeyWidth(e.KeyID, false);
         float girth = .5f * (keyWidth[0] - keyWidth[1]).magnitude;
         float duration = Note.GetDuration(e.NoteType);
@@ -131,6 +130,7 @@ public class HighlightEveryKey : MonoBehaviour {
         cube.transform.parent = pianoRollContainer.transform;
         cube.transform.localPosition = new Vector3(x_center, y_center, z_depth);
         cube.transform.localScale = new Vector3(girth, 0.01f, length);
+        cube.transform.rotation = GameObject.Find("MainApp").gameObject.transform.rotation;
     }
 
     public void DestroyAllPianoRollItems()
